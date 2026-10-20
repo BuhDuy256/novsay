@@ -193,7 +193,7 @@
         "Remove unsupported compatibility frontmatter and retain compatibility guidance in the skill body.",
         "Require pnpm install --frozen-lockfile when the local binary is missing; the skill may not install or upgrade packages during review.",
         "Use delegation mode only, so OCR does not require a separate LLM configuration.",
-        "Apply DeckAgent-specific review filters and rules from .opencodereview/rule.json."
+        "Apply project-specific review filters and rules from .opencodereview/rule.json."
       ],
       "status": "installed"
     },

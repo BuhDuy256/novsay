@@ -13,7 +13,7 @@ dimensions:           # key = dimension name from dimensions.md in snake_case; l
 
 ## Who
 
-<!-- 1-2 short sentences: who these people are and what brings them to DeckAgent. No features, no named individuals (U-01, U-04). -->
+<!-- 1-2 short sentences: who these people are and what brings them to the product. No features, no named individuals (U-01, U-04). -->
 
 - 
 - **Evidence:** [assumed]

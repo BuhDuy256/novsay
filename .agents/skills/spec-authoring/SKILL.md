@@ -15,7 +15,7 @@ The rules live in three files. Read them before writing. Do not restate them in 
 
 Write only what comes from the user, from the file being rewritten, or from the research cards in `docs/research/`. If a step needs behavior from none of these, mark it `[assumed]` and say so in the report. Do not invent it.
 
-A use case explores behaviors DeckAgent could perform. A flow taken from a research card or a reference product is allowed. Its evidence says where it came from. It is not a commitment to build it.
+A use case explores behaviors the product could perform. A flow taken from a research card or a reference product is allowed. Its evidence says where it came from. It is not a commitment to build it.
 
 The `versions` field of a use case belongs to the owner. Copy it exactly. Never add, remove or reorder a version or a flow in it unless the task asks for that change. Never select a flow because a research card shows it.
 

@@ -4,7 +4,7 @@ Template: `_TEMPLATE.md`. Style: `../_STYLE.md`. Parent: `../02-users/`. Childre
 
 ## 1. What a use case is, and is not
 
-**A use case models behaviors DeckAgent could perform, for one goal a user reaches in one sitting.** It says what the user does and how DeckAgent visibly responds. Each system response is a candidate functional requirement. Each alternative flow is a candidate error or edge requirement. Each rule or quality target a step depends on is cited here and defined elsewhere.
+**A use case models behaviors the product could perform, for one goal a user reaches in one sitting.** It says what the user does and how the product visibly responds. Each system response is a candidate functional requirement. Each alternative flow is a candidate error or edge requirement. Each rule or quality target a step depends on is cited here and defined elsewhere.
 
 **A flow records a behavior to consider, not a commitment to implement it.** Use cases explore broadly. A flow can come from a need, a research card, a reference product or an assumption. Evidence says where the idea came from (section 2). The version scope says which flows a version must meet (Version scope, below). Nothing else selects a flow.
 

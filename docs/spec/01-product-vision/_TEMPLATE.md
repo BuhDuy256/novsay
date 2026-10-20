@@ -1,18 +1,18 @@
 ---
 id: VIS-001
-title: ""             # what DeckAgent is, in a few plain words, with no praise (VG-01, VG-17)
+title: ""             # what the product is, in a few plain words, with no praise (VG-01, VG-17)
 status: Draft         # Draft | Active (Active: no proposed block, every main section confirmed, VG-07, VG-19)
 ---
 
 <!-- Write in plain English: docs/spec/_STYLE.md (VG-12). Gate: _CRITERIA.md.
-     The vision defines what DeckAgent is. It is not a decision log, a feature list or a scope (VG-01, VG-08).
+     The vision defines what the product is. It is not a decision log, a feature list or a scope (VG-01, VG-08).
      Before you write a block, ask: does it stay true if the scope, the interface or the code changes? If not, it goes elsewhere (_CRITERIA.md section 1).
      Only the owner confirms. Anything else is "proposed" or an open question (VG-14).
      A section with nothing confirmed or proposed says "Not written yet" and names its open question. Do not fill it to look complete (VG-16).
      Each fact is written once (VG-06). No rule or quality value (VG-09). No praise words (VG-17).
 
      Shared fields for every statement block:
-       Statement: what is true. Present tense for what DeckAgent is. "DeckAgent aims to..." for a direction (VG-18).
+       Statement: what is true. Present tense for what the product is. "The product aims to..." for a direction (VG-18).
        Status: "confirmed" or "proposed". Always present (VG-07).
        Source: "owner" when confirmed. When proposed: who proposed it and what it was inferred from (VG-14).
        Means for specs: what a lower spec must keep true or must not assume. Only what follows directly from the statement.
@@ -20,10 +20,10 @@ status: Draft         # Draft | Active (Active: no proposed block, every main se
        Updated at: the date of the last change to this block, as dd-mm-yyyy, always the last field (VG-13).
      Headings: "### X-n · Short name" (5 words or fewer). IDs are stable: retire, never renumber (VG-05). -->
 
-## What DeckAgent is
+## What the product is
 
-<!-- Question 1. What kind of product DeckAgent is, and the ideas a reader needs to understand it.
-     No feature list. A capability (export, voice input, editing) is a use case, unless the owner says it defines DeckAgent (VG-01).
+<!-- Question 1. What kind of product this is, and the ideas a reader needs to understand it.
+     No feature list. A capability (export, voice input, editing) is a use case, unless the owner says it defines the product (VG-01).
      Fields: Statement, Status, Source, Means for specs, Updated at. -->
 
 ### I-1 · Short name
@@ -33,9 +33,9 @@ status: Draft         # Draft | Active (Active: no proposed block, every main se
 - **Source:**
 - **Updated at:** DD-MM-YYYY
 
-## Why DeckAgent exists
+## Why the product exists
 
-<!-- Questions 2 and 3. The problem DeckAgent exists to solve, for whom, and the main value it gives.
+<!-- Questions 2 and 3. The problem the product exists to solve, for whom, and the main value it gives.
      Write only what the owner said or what evidence shows. Never invent a problem, a research result, a market need or a benefit (VG-15).
      With [assumed] evidence only, write it as a belief: "The owner believes...".
      Fields: Statement, Status, Source, Evidence, Means for specs, Updated at.
@@ -66,7 +66,7 @@ status: Draft         # Draft | Active (Active: no proposed block, every main se
 
 ## Boundaries
 
-<!-- Question 5. What DeckAgent is not, by its nature. Test: does it hold with unlimited time? If not, it is scope (VG-03, VG-08).
+<!-- Question 5. What the product is not, by its nature. Test: does it hold with unlimited time? If not, it is scope (VG-03, VG-08).
      A missing feature is not a boundary. A limit of the thesis project or of a release is not a boundary.
      Write what is true in positive words where you can, not only what is absent.
      Fields: Statement, Status, Source, Why, Means for specs, Updated at. -->

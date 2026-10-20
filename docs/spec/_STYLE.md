@@ -62,26 +62,26 @@ Use these words for these things. Add a row when a new term is needed. Do not ad
 | **notice** | A short message the system gives about what happened |
 | **status message** | The text in the conversation that says what the system is doing now and how the request stands |
 | **activity** | One piece of work the system did or planned during a request. It holds what the system did, its state and the information known about its result |
-| **activity state** | What an activity has reached: planned, running, completed, failed, stopped or interrupted. Planned means the system produced a plan that names the activity; a request with no plan has no planned activity. Interrupted means the work on the activity ended before its result was confirmed, because DeckAgent ended. It is not a stop and not a failure. The interrupted state is a proposed default, not an approved owner decision |
+| **activity state** | What an activity has reached: planned, running, completed, failed, stopped or interrupted. Planned means the system produced a plan that names the activity; a request with no plan has no planned activity. Interrupted means the work on the activity ended before its result was confirmed, because the product ended. It is not a stop and not a failure. The interrupted state is a proposed default, not an approved owner decision |
 | **activity timeline** | The activities of one request in the order they happen. An executed activity is work that started. A planned activity is work the system planned but has not started, and it appears only when the system produced a plan. The conversation shows the activities with the status message of the request |
 | **activity detail** | The information the system shows about one activity when the user reads it. It can name an internal step, an argument or a result when that is safe to show |
 | **placeholder** | Text the system wrote because the user gave none |
 | **design system** | A set of design rules the user can choose for different decks, such as colours, fonts and a logo |
 | **default design system** | The design system the system uses when the user chose none |
 | **look** | How one deck is shown: its colours, fonts and arrangement on the slides. A look can use a design system |
-| **deck state** | The content and the look of a deck at one moment in its work. It is not a version: a version is a release of DeckAgent (`00-current-scope/`) |
+| **deck state** | The content and the look of a deck at one moment in its work. It is not a version: a version is a release of the product (`00-current-scope/`) |
 | **variant** | Another deck that exists beside a deck, for another use. It is not a deck state |
-| **chat** | One line of work with DeckAgent: its conversation and the presentation work that belongs to it. This term does not fix how many decks a chat holds. Each version sets it (`00-current-scope/VERSIONS.md`). In V1 a chat holds one deck |
+| **chat** | One line of work with the product: its conversation and the presentation work that belongs to it. This term does not fix how many decks a chat holds. Each version sets it (`00-current-scope/VERSIONS.md`). In V1 a chat holds one deck |
 | **dashboard** | A place where the user sets up skills or models. Opening it keeps the conversation, the request text and the attachments as they were |
 | **provider configuration** | One saved connection to a model service. It is more than a key. It connects to a built-in provider or to a custom model API. It holds a provider ID, a display name and what the provider needs, such as a key. It also holds its added models |
-| **built-in provider** | A model provider that DeckAgent offers by name [BR-005]. DeckAgent knows its provider ID and its default settings |
+| **built-in provider** | A model provider that the product offers by name [BR-005]. The product knows its provider ID and its default settings |
 | **custom model API** | A model service that the user describes: its provider ID, its base URL and its API protocol. It is not a built-in provider |
 | **provider ID** | The name that identifies the provider of a provider configuration. A built-in provider has its own. The user gives one to a custom model API. It never changes after the provider configuration is saved. It is not the display name |
 | **base URL** | The address to which the system sends the requests of a provider configuration |
 | **API protocol** | The way a model service expects to be asked [BR-005]. Several custom model APIs can use the same API protocol |
 | **display name** | The name the user gives a provider configuration [BR-008]. It never says which provider the configuration connects to |
 | **model catalog** | The list of models that a provider returns when the system asks for it. It is not the list of added models. It does not show which models the user's key can run. Some providers return none |
-| **default models** | The added models that DeckAgent gives for a built-in provider, where it has them [BR-005]. The user can restore them |
+| **default models** | The added models that the product gives for a built-in provider, where it has them [BR-005]. The user can restore them |
 | **model ID** | The name by which a provider identifies one of its models |
 | **added model** | A model ID that the user added to one provider configuration. It comes from the model catalog or is given by hand. It belongs to that provider configuration only. Saving it does not show that the provider runs it |
 | **selectable model** | An added model that the user can choose for a chat [BR-005]. Being selectable does not show that the provider runs it |

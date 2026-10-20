@@ -33,8 +33,8 @@ title: "<name of the quality>"   # a short name for the quality, not for a step,
 
 <!-- At least one measurement. One block per measurement: "### M-n · Short name". IDs are never renumbered (NFG-12).
      Conditions: the state, the inputs and the environment, well enough to repeat. Cite rule values as [BR-xxx].
-       State the boundary: product-controlled (a part of the result DeckAgent controls) or end-to-end (the whole result the user experiences, which can include provider time).
-       Name the provider-dependent conditions that can change the result. Never leave provider time out silently. Never present provider performance as a DeckAgent guarantee (NFG-08).
+       State the boundary: product-controlled (a part of the result the product controls) or end-to-end (the whole result the user experiences, which can include provider time).
+       Name the provider-dependent conditions that can change the result. Never leave provider time out silently.        Never present provider performance as a product guarantee (NFG-08).
      Measure: the quantity measured, or the property checked.
      Method: how it is measured or checked, in words. No tool, no architecture.
      Target: a value with its unit and bound, or the required property. A security, privacy or data-integrity check can be a property with no number (NFG-08).

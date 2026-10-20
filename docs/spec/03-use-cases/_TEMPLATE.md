@@ -12,7 +12,7 @@ next: []              # use cases that normally come after this one
                       # Relations point down or forward only. Never name a segment or a hypothesis here (UCG-01, UCG-07, UCG-10).
 ---
 
-<!-- A use case models behaviors DeckAgent could perform. A flow records a behavior to consider, not a commitment.
+<!-- A use case models behaviors the product could perform. A flow records a behavior to consider, not a commitment.
      Only `versions` selects flows. Evidence says where an idea came from; it selects nothing (_CRITERIA.md sections 1 and 2).
      Write in plain English: docs/spec/_STYLE.md (UCG-11).
      Write intent and response, never interface (UCG-13, _STYLE rule 11). No control, menu, gesture, position, look or label.
