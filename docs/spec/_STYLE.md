@@ -54,7 +54,8 @@ Dùng những từ này cho những thứ này. Thêm dòng khi cần từ mới
 | **nghe nền** | Phát audio vẫn tiếp tục khi chuyển app, tắt màn hình hoặc khóa máy |
 | **gián đoạn** | Sự kiện làm audio dừng. Khi nghe lại, lùi tối đa 5 giây so với vị trí dừng |
 | **giọng đọc** | Giọng TTS được chọn để đọc nội dung |
-| **dịch** | Việc chuyển nội dung sang ngôn ngữ đọc. Còn mở: đọc nguyên bản hay dịch rồi đọc |
+| **ngôn ngữ gốc** | Ngôn ngữ của văn bản truyện nguồn |
+| **dịch** | Việc chuyển nội dung sang ngôn ngữ đọc. Novsay đọc nguyên bản; dịch để version sau |
 
 ## Cách kiểm tra
 

@@ -34,7 +34,8 @@ Template: `_TEMPLATE.md`. Phong cách: `../_STYLE.md`. Con: `../03-requirements/
 - ID không đánh lại số.
 
 ID use case đã loại bỏ:
-- UC-003 — gỡ 21-10-2026; tự chuyển chương kế bị hoãn, không thuộc scope hiện tại.
+- UC-003 — gỡ 21-10-2026; tự chuyển chương kế bị hoãn, không thuộc scope hiện tại. ID dùng lại 21-10-2026 cho use case trước là UC-004, theo yêu cầu owner.
+- UC-005 — đổi số thành UC-004 ngày 21-10-2026; nội dung không đổi, theo yêu cầu owner.
 
 ## 2. Thẻ bằng chứng
 
