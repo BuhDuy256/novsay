@@ -25,6 +25,7 @@ Dừng và báo, không viết gì, khi: bảng thiếu cột; một dòng bư�
    - Cột Người dùng không trống → `U->>S: <người dùng>`.
    - Cột Hệ thống không trống → `S-->>U: <hệ thống>`.
    - Thay mọi `"` trong nội dung bằng `'`.
+   - Thay mọi `;` trong nội dung bằng `,`. Mermaid coi `;` là dấu tách câu lệnh, nên nhãn chứa `;` làm sơ đồ không parse được.
 
 ## 3. Nhánh thay thế
 
