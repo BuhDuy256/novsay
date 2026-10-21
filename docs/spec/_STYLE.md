@@ -45,14 +45,16 @@ Dùng những từ này cho những thứ này. Thêm dòng khi cần từ mới
 | Thuật ngữ | Nghĩa |
 |---|---|
 | **tài khoản** | Danh tính của người dùng để truy cập và giữ dữ liệu riêng |
-| **truyện** | Một tác phẩm dài nhiều chương. Tiến độ được giữ theo từng truyện |
+| **truyện** | Một tác phẩm dài nhiều chương |
 | **chương** | Một phần của truyện. Người dùng nhận link chương công khai |
 | **nguồn** | Website cung cấp nội dung truyện. V1: Novel543 |
 | **văn bản truyện** | Văn bản lấy được từ một chương, được xem trước khi nghe |
 | **transcript** | Văn bản truyện đã được owner xác nhận bằng hành động nghe. Audio đọc đúng transcript này |
 | **audio** | Bản đọc (TTS) của transcript, được chuẩn bị mới hoặc dùng lại |
-| **bản nghe** | Bản đã lưu gồm transcript và audio tương ứng của một chương trong tài khoản owner |
-| **tiến độ** | Vị trí nghe đã lưu của một truyện |
+| **yêu cầu chuẩn bị** | Việc chuẩn bị audio từ transcript đã xác nhận, có trạng thái riêng |
+| **bản nghe** | Transcript đã xác nhận và audio tương ứng; chỉ dùng trong phiên hoặc được lưu vào tài khoản owner |
+| **bản đã lưu** | Bản nghe đã lưu thành công cả transcript lẫn audio vào tài khoản owner |
+| **tiến độ** | Vị trí nghe gắn với một bản nghe và audio tương ứng trên thiết bị hiện tại |
 | **nghe nền** | Phát audio vẫn tiếp tục khi chuyển app, tắt màn hình hoặc khóa máy |
 | **gián đoạn** | Sự kiện làm audio dừng. Khi nghe lại, lùi tối đa 5 giây so với vị trí dừng |
 | **giọng đọc** | Giọng TTS được chọn để đọc transcript |
