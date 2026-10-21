@@ -15,8 +15,8 @@ updated: DD-MM-YYYY
 <!-- BEGIN generated: use-case-sequence -->
 ```mermaid
 sequenceDiagram
-  participant U["Người dùng"]
-  participant S["Hệ thống"]
+  participant U as Người dùng
+  participant S as Hệ thống
   U->>S: ý định của người dùng
   S-->>U: phản hồi của hệ thống
 ```

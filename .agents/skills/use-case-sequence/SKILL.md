@@ -20,7 +20,7 @@ Dừng và báo, không viết gì, khi: bảng thiếu cột; một dòng bư�
 
 ## 2. Xây message
 
-1. Khai báo participant: `participant U["Người dùng"]` và `participant S["Hệ thống"]`.
+1. Khai báo participant: `participant U as Người dùng` và `participant S as Hệ thống`.
 2. Với mỗi bước theo thứ tự:
    - Cột Người dùng không trống → `U->>S: <người dùng>`.
    - Cột Hệ thống không trống → `S-->>U: <hệ thống>`.
@@ -38,8 +38,8 @@ Khối đúng các dòng sau (mỗi dòng trong code block lùi 2 khoảng trắ
 <!-- BEGIN generated: use-case-sequence -->
 ```mermaid
 sequenceDiagram
-  participant U["Người dùng"]
-  participant S["Hệ thống"]
+  participant U as Người dùng
+  participant S as Hệ thống
   U->>S: <người dùng>
   S-->>U: <hệ thống>
 ```

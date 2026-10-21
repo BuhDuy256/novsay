@@ -33,7 +33,8 @@ Template: `_TEMPLATE.md`. Phong cách: `../_STYLE.md`. Con: `../03-requirements/
 - ID mới lấy số sau ID cao nhất trong folder và trong danh sách ID đã loại bỏ. Khoảng trống giữ nguyên.
 - ID không đánh lại số.
 
-ID use case đã loại bỏ: không có.
+ID use case đã loại bỏ:
+- UC-003 — gỡ 21-10-2026; tự chuyển chương kế bị hoãn, không thuộc scope hiện tại.
 
 ## 2. Thẻ bằng chứng
 
