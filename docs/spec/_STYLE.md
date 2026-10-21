@@ -56,7 +56,7 @@ Dùng những từ này cho những thứ này. Thêm dòng khi cần từ mới
 | **bản đã lưu** | Bản nghe đã lưu thành công cả transcript lẫn audio vào tài khoản owner |
 | **tiến độ** | Vị trí nghe gắn với một bản nghe và audio tương ứng trên thiết bị hiện tại |
 | **nghe nền** | Phát audio vẫn tiếp tục khi chuyển app, tắt màn hình hoặc khóa máy |
-| **gián đoạn** | Sự kiện làm audio dừng. Khi nghe lại, lùi tối đa 5 giây so với vị trí dừng |
+| **gián đoạn** | Sự kiện làm việc nghe dừng ngoài yêu cầu chủ động của owner. Phạm vi và giới hạn khôi phục theo NFR-003 |
 | **giọng đọc** | Giọng TTS được chọn để đọc transcript |
 | **ngôn ngữ gốc** | Ngôn ngữ của văn bản truyện nguồn |
 | **dịch** | Việc chuyển nội dung sang ngôn ngữ đọc. Novsay đọc nguyên bản; dịch để version sau |
