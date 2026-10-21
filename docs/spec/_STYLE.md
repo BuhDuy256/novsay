@@ -48,12 +48,14 @@ Dùng những từ này cho những thứ này. Thêm dòng khi cần từ mới
 | **truyện** | Một tác phẩm dài nhiều chương. Tiến độ được giữ theo từng truyện |
 | **chương** | Một phần của truyện. Người dùng nhận link chương công khai |
 | **nguồn** | Website cung cấp nội dung truyện. V1: Novel543 |
-| **nội dung chương** | Văn bản lấy được từ một chương |
-| **audio** | Bản đọc (TTS) của nội dung chương, được chuẩn bị mới hoặc dùng lại |
+| **văn bản truyện** | Văn bản lấy được từ một chương, được xem trước khi nghe |
+| **transcript** | Văn bản truyện đã được owner xác nhận bằng hành động nghe. Audio đọc đúng transcript này |
+| **audio** | Bản đọc (TTS) của transcript, được chuẩn bị mới hoặc dùng lại |
+| **bản nghe** | Bản đã lưu gồm transcript và audio tương ứng của một chương trong tài khoản owner |
 | **tiến độ** | Vị trí nghe đã lưu của một truyện |
 | **nghe nền** | Phát audio vẫn tiếp tục khi chuyển app, tắt màn hình hoặc khóa máy |
 | **gián đoạn** | Sự kiện làm audio dừng. Khi nghe lại, lùi tối đa 5 giây so với vị trí dừng |
-| **giọng đọc** | Giọng TTS được chọn để đọc nội dung |
+| **giọng đọc** | Giọng TTS được chọn để đọc transcript |
 | **ngôn ngữ gốc** | Ngôn ngữ của văn bản truyện nguồn |
 | **dịch** | Việc chuyển nội dung sang ngôn ngữ đọc. Novsay đọc nguyên bản; dịch để version sau |
 
