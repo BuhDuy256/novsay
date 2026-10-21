@@ -1,99 +1,87 @@
 ---
 id: VIS-001
-title: ""             # what the product is, in a few plain words, with no praise (VG-01, VG-17)
-status: Draft         # Draft | Active (Active: no proposed block, every main section confirmed, VG-07, VG-19)
+title: ""
+updated: DD-MM-YYYY
 ---
 
-<!-- Write in plain English: docs/spec/_STYLE.md (VG-12). Gate: _CRITERIA.md.
-     The vision defines what the product is. It is not a decision log, a feature list or a scope (VG-01, VG-08).
-     Before you write a block, ask: does it stay true if the scope, the interface or the code changes? If not, it goes elsewhere (_CRITERIA.md section 1).
-     Only the owner confirms. Anything else is "proposed" or an open question (VG-14).
-     A section with nothing confirmed or proposed says "Not written yet" and names its open question. Do not fill it to look complete (VG-16).
-     Each fact is written once (VG-06). No rule or quality value (VG-09). No praise words (VG-17).
+<!-- Viết theo docs/spec/_STYLE.md. Gate: _CRITERIA.md.
+     Tầm nhìn nói sản phẩm là gì, không phải nhật ký quyết định, danh sách tính năng hay phạm vi (VG-01).
+     Trước khi viết một block, hỏi: nó có còn đúng nếu phạm vi, giao diện hay code thay đổi không? Không thì nó thuộc nơi khác (_CRITERIA.md mục 1).
+     Mỗi dữ kiện viết đúng một lần (VG-06). Không quy tắc hay giá trị chất lượng (VG-09). Không từ ca ngợi (VG-12).
+     Phần chưa có gì chốt ghi "Chưa viết. Xem Q-x." Đừng điền cho đầy (VG-14).
 
-     Shared fields for every statement block:
-       Statement: what is true. Present tense for what the product is. "The product aims to..." for a direction (VG-18).
-       Status: "confirmed" or "proposed". Always present (VG-07).
-       Source: "owner" when confirmed. When proposed: who proposed it and what it was inferred from (VG-14).
-       Means for specs: what a lower spec must keep true or must not assume. Only what follows directly from the statement.
-         Remove the field when Status is "proposed" (VG-07).
-       Updated at: the date of the last change to this block, as dd-mm-yyyy, always the last field (VG-13).
-     Headings: "### X-n · Short name" (5 words or fewer). IDs are stable: retire, never renumber (VG-05). -->
+     Trường dùng chung cho mọi block phát biểu:
+       Phát biểu: điều gì là đúng. Hiện tại cho điều sản phẩm là. "Sản phẩm hướng tới..." cho một định hướng.
+       Trạng thái: "chốt" (bạn đã quyết) hoặc "đề xuất" (AI gợi ý, chờ bạn duyệt). Luôn có.
+       Nguồn: chỉ khi "đề xuất" — ai đề xuất và suy ra từ đâu.
+       Hệ quả cho spec: spec bậc dưới phải giữ đúng hay không được giả định gì. Chỉ điều suy trực tiếp từ phát biểu. Bỏ trường khi Trạng thái là "đề xuất".
+       Ngày cập nhật: chỉ một `updated` ở frontmatter, là ngày sửa gần nhất. Không ghi ai sửa; git history làm việc đó. -->
 
-## What the product is
+## Sản phẩm là gì
 
-<!-- Question 1. What kind of product this is, and the ideas a reader needs to understand it.
-     No feature list. A capability (export, voice input, editing) is a use case, unless the owner says it defines the product (VG-01).
-     Fields: Statement, Status, Source, Means for specs, Updated at. -->
+<!-- Câu hỏi 1. Loại sản phẩm này là gì, và những ý cần để hiểu nó. Không danh sách tính năng.
+     Một khả năng (xuất, nhập giọng nói, chỉnh sửa) là use case, trừ khi bạn nói nó định nghĩa sản phẩm (VG-01).
+     Trường: Phát biểu, Trạng thái, Nguồn, Hệ quả cho spec. -->
 
-### I-1 · Short name
+### I-1 · Tên ngắn
 
-- **Statement:**
-- **Status:** proposed
-- **Source:**
-- **Updated at:** DD-MM-YYYY
+- **Phát biểu:**
+- **Trạng thái:** đề xuất
+- **Nguồn:**
 
-## Why the product exists
+## Vì sao tồn tại
 
-<!-- Questions 2 and 3. The problem the product exists to solve, for whom, and the main value it gives.
-     Write only what the owner said or what evidence shows. Never invent a problem, a research result, a market need or a benefit (VG-15).
-     With [assumed] evidence only, write it as a belief: "The owner believes...".
-     Fields: Statement, Status, Source, Evidence, Means for specs, Updated at.
-     When nothing is known yet, replace the block with: "Not written yet. See Q-x." (VG-16) -->
+<!-- Câu hỏi 2 và 3. Vấn đề sản phẩm giải quyết, cho ai, và giá trị chính nó mang lại.
+     Chỉ viết điều bạn đã nói hoặc bằng chứng cho thấy. Đừng bịa vấn đề, kết quả nghiên cứu hay lợi ích.
+     Chỉ có bằng chứng [assumed], viết thành niềm tin: "Tôi tin rằng...".
+     Trường: Phát biểu, Trạng thái, Nguồn, Bằng chứng, Hệ quả cho spec. -->
 
-### W-1 · Short name
+### W-1 · Tên ngắn
 
-- **Statement:**
-- **Status:** proposed
-- **Source:**
-- **Evidence:** [assumed]
-- **Updated at:** DD-MM-YYYY
+- **Phát biểu:**
+- **Trạng thái:** đề xuất
+- **Nguồn:**
+- **Bằng chứng:** [assumed]
 
-## Principles
+## Nguyên tắc
 
-<!-- Question 4. Rules that guide product choices when a spec has to choose. Each one rules something out.
-     Not a technical solution: "the user chooses the model" is a principle; "calls the provider over HTTP" is an ADR (VG-02).
-     Why: the reason the owner gave, or "not recorded". Never invent a reason.
-     Fields: Statement, Status, Source, Why, Means for specs, Updated at. -->
+<!-- Câu hỏi 4. Quy tắc dẫn lựa chọn khi spec phải chọn. Mỗi quy tắc loại trừ điều gì đó.
+     Không phải giải pháp kỹ thuật: "người dùng chọn giọng đọc" là nguyên tắc; "gọi provider qua HTTP" là ADR (VG-02).
+     Trường: Phát biểu, Trạng thái, Nguồn, Vì sao, Hệ quả cho spec. -->
 
-### P-1 · Short name
+### P-1 · Tên ngắn
 
-- **Statement:**
-- **Status:** proposed
-- **Source:**
-- **Why:** not recorded
-- **Updated at:** DD-MM-YYYY
+- **Phát biểu:**
+- **Trạng thái:** đề xuất
+- **Nguồn:**
+- **Vì sao:**
 
-## Boundaries
+## Ranh giới
 
-<!-- Question 5. What the product is not, by its nature. Test: does it hold with unlimited time? If not, it is scope (VG-03, VG-08).
-     A missing feature is not a boundary. A limit of the thesis project or of a release is not a boundary.
-     Write what is true in positive words where you can, not only what is absent.
-     Fields: Statement, Status, Source, Why, Means for specs, Updated at. -->
+<!-- Câu hỏi 5. Sản phẩm KHÔNG là gì, do bản chất. Phép thử: nó có còn đúng với thời gian vô hạn không? Không thì đó là phạm vi (VG-03).
+     Một tính năng thiếu không phải ranh giới. Một giới hạn của V1 không phải ranh giới.
+     Viết điều đúng bằng từ tích cực khi có thể, không chỉ điều vắng mặt.
+     Trường: Phát biểu, Trạng thái, Nguồn, Vì sao, Hệ quả cho spec. -->
 
-### B-1 · Short name
+### B-1 · Tên ngắn
 
-- **Statement:**
-- **Status:** proposed
-- **Source:**
-- **Why:** not recorded
-- **Updated at:** DD-MM-YYYY
+- **Phát biểu:**
+- **Trạng thái:** đề xuất
+- **Nguồn:**
+- **Vì sao:**
 
-## Open questions
+## Câu hỏi mở
 
-<!-- One block per question that waits for the owner (VG-04). Remove the section if empty.
-     Fixed field names and order: Question, Affects, Resolved by, Updated at.
-     Question: ends with "?". No other block answers it.
-     Affects: the lower spec items that wait for the answer, by ID (for example UC-001 S5, USR-003 H-2), or "none found".
-     Resolved by: a role, and the record it needs if any (for example "owner, with an ADR"). -->
+<!-- Một block cho mỗi câu hỏi chờ bạn chốt (VG-04). Bỏ phần này nếu trống.
+     Trường cố định theo thứ tự: Câu hỏi, Ảnh hưởng.
+     Câu hỏi: kết thúc bằng "?". Không block nào khác trả lời nó.
+     Ảnh hưởng: các mục spec bậc dưới chờ câu trả lời, theo ID (ví dụ UC-001 S5), hoặc "chưa thấy". -->
 
-### Q-1 · Short name
+### Q-1 · Tên ngắn
 
-- **Question:**
-- **Affects:** none found
-- **Resolved by:** owner
-- **Updated at:** DD-MM-YYYY
+- **Câu hỏi:**
+- **Ảnh hưởng:** chưa thấy
 
-## Retired
+## Đã loại bỏ
 
-<!-- IDs that were removed, each with one line on where the content went (VG-05). Never reuse them. Remove the section if empty. -->
+<!-- ID đã gỡ, mỗi ID một dòng nói nội dung đi đâu (VG-05). Không dùng lại. Bỏ phần này nếu trống. -->

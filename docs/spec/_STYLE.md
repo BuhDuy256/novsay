@@ -1,109 +1,75 @@
-# Spec style: plain English
+# Quy tắc viết spec
 
-Applies to every file in `docs/spec/`. Research cards in `docs/research/` are raw notes and are exempt. Rules 5 and 7 apply to the `System` and `When` fields of use cases. Rule 11 applies to every use case, whole. In user segments, hedge words such as "may" are allowed when they state real uncertainty, and the person's devices and input methods may be named, because they describe the person and not the product.
+Áp dụng cho mọi file trong `docs/spec/`. Các quy tắc 5 và 7 áp dụng cho trường `Hệ thống` và `Khi` của use case. Quy tắc 11 áp dụng cho toàn bộ use case.
 
-**Why:** most readers are not native English speakers. A System response becomes a functional requirement, so it must have one meaning. Plain words give both.
+**Vì sao:** mỗi câu chỉ có một nghĩa, để một phản hồi của hệ thống trở thành một yêu cầu kiểm thử được. Từ ngữ thường làm được cả hai điều đó.
 
-## Rules
+## Quy tắc
 
-| # | Rule | Not this | Write this |
+| # | Quy tắc | Không viết | Viết |
 |---|---|---|---|
-| 1 | **One thing, one name.** Use the terms in the table below. Never swap in a synonym. | "request area" and "request zone" for the same thing | "request area" every time |
-| 2 | **Use ordinary words.** show, keep, use, start, end, earlier, next, to | display, render, retain, utilize, initiate, terminate, prior, subsequent, in order to | "The system shows the outline." |
-| 3 | **No idioms or phrasal verbs.** | "folded into the same deck", "kicks off", "falls back" | "added to the same deck", "starts", "uses the default" |
-| 4 | **No vague verbs.** Banned: handle, manage, support, process, ensure, properly, gracefully, appropriate. A use case names no interface label, so there is no exemption (rule 11) | "The system handles the failure gracefully." | "The system says the outline could not be drafted and keeps the request." |
-| 5 | **No may, might, should, could in a System response.** Say what the system does. Use **can** only for what the user is allowed to do. | "The system may show a notice." | "The system shows a notice." |
-| 6 | **Short, active sentences.** At most 20 words. Subject first. One action per sentence. Citations such as `[BR-xxx]` do not count. | "A notice is shown that the work was stopped and how many slides were made." | "The system shows a notice that it stopped. The notice gives the number of slides made." |
-| 7 | **Conditions go in the When field.** A System response has no "if". When behavior differs by step or moment, start the bullet with a plain label: "At S3:", "Connection returns:". | "If the file is too large, the system rejects it." | When: "A file is over the size limit [BR-?]." System: "Shows the reason on the file card." |
-| 8 | **One action per bullet. At most 7 bullets per field.** More than 7 means split the step or flow. | One 110-word table cell | One bullet per thing the user can see |
-| 9 | **Bold sparingly.** Bold a defined term from the table, on its first use in a bullet only. At most 2 per bullet. | Bold on whole phrases | "Shows the **deck canvas**." |
-| 10 | **Evidence on its own line.** One tag per claim. Never inside a sentence. | "…the view stays on the first slide `[observed: …]`, and adding slides is not offered." | `- **Evidence:** [observed: claude-report (view stays on the first slide)]` |
-| 11 | **Intent and response, not interface.** The user side says what the user wants to do. The system side says what the system tells, keeps, changes or builds. Never name a widget, a gesture, a position, a look or a label. Name a place only by its zone (see Zones). If a UI detail carries a requirement, write the requirement. | "The user opens the + menu and chooses a skill." "Opens the dashboard as an overlay at the bottom right." "Shows a card with a Retry button." | "The user chooses a skill." "Opens the dashboard. The conversation, the request text and the attachments stay as they were." "Lets the user try again." |
+| 1 | **Một thứ, một tên.** Dùng đúng từ trong bảng thuật ngữ. Không bao giờ đổi từ đồng nghĩa. | "tiến độ" và "vị trí nghe" cho cùng một thứ | "tiến độ" mọi lúc |
+| 2 | **Dùng từ thường.** hiện, giữ, dùng, bắt đầu, kết thúc, trước, sau | hiển thị, duy trì, khởi tạo, kết thúc công việc, trước đó, sau đó | "Hệ thống phát audio." |
+| 3 | **Không thành ngữ hay cụm bóng bẩy.** | "bật đèn xanh", "chốt hạ", "quay xe" | "đồng ý", "kết thúc", "đổi ý" |
+| 4 | **Không động từ mơ hồ.** Cấm: xử lý, quản lý, hỗ trợ, đảm bảo, thực hiện, tiến hành, phù hợp, đúng cách, mượt mà. | "Hệ thống xử lý lỗi một cách mượt mà." | "Hệ thống báo không lấy được nội dung và giữ link người dùng đã nhập." |
+| 5 | **Không "có thể", "nên", "có lẽ" trong phản hồi hệ thống.** Nói điều hệ thống làm. Dùng **"được phép"** chỉ cho quyền của người dùng. | "Hệ thống có thể hiện thông báo." | "Hệ thống hiện thông báo." |
+| 6 | **Câu ngắn, chủ động.** Một hành động một câu. Trích dẫn `[BR-xxx]` không tính. | "Một thông báo được hiện rằng công việc đã dừng và có bao nhiêu chương đã xong." | "Hệ thống hiện thông báo rằng nó đã dừng. Thông báo nêu số chương đã làm." |
+| 7 | **Điều kiện để ở trường Khi.** Phản hồi hệ thống không có "nếu". Khi hành vi khác theo bước, mở đầu bằng nhãn: "Tại S3:", "Kết nối trở lại:". | "Nếu link không hợp lệ, hệ thống từ chối." | Khi: "Link không khớp nguồn [BR-?]." Hệ thống: "Nêu lý do." |
+| 8 | **Một hành động một dòng. Tối đa 7 dòng mỗi trường.** | Một ô 110 chữ | Mỗi dòng một việc người dùng thấy được |
+| 9 | **In đậm ít.** In đậm một từ trong bảng thuật ngữ ở lần dùng đầu tiên của một dòng. Tối đa 2 chỗ một dòng. | In đậm cả cụm | "Phát **audio**." |
+| 10 | **Bằng chứng ở dòng riêng.** Một thẻ cho một nhận định. Không bao giờ đặt giữa câu. | "…màn hình vẫn ở chương đầu `[observed: …]`, và không đề nghị tải chương sau." | `- **Bằng chứng:** [observed: claude-report (màn hình giữ chương đầu)]` |
+| 11 | **Ý định và phản hồi, không phải giao diện.** Bên người dùng nói người dùng muốn gì. Bên hệ thống nói hệ thống báo, giữ, đổi hay tạo gì. Không bao giờ gọi tên widget, thao tác, vị trí, kiểu dáng hay nhãn. Gọi tên một nơi chỉ bằng vùng (xem Vùng). Nếu một chi tiết giao diện mang yêu cầu, hãy viết yêu cầu đó. | "Người dùng mở menu và chọn một truyện." "Mở màn nghe ở góc dưới." "Hiện thẻ có nút nghe lại." | "Người dùng chọn một truyện." "Mở màn nghe. Tiến độ đã lưu và audio hiện tại giữ nguyên." "Cho người dùng nghe lại." |
 
-Rules 4 to 7 keep a response testable. Rules 1 to 3 and 6 keep it easy to read. Rule 11 keeps the spec true when the design changes.
+Quy tắc 4 đến 7 giữ phản hồi kiểm thử được. Quy tắc 1 đến 3 và 6 giữ nó dễ đọc. Quy tắc 11 giữ spec đúng khi thiết kế thay đổi.
 
-## Evidence tags
+## Thẻ bằng chứng
 
-Same tags as `02-users` and `03-use-cases` (U-06, UCG-08):
+Một thẻ cho một nhận định. Khóa giữ tiếng Anh để grep được; nội dung nguồn viết tiếng Việt:
 
-- `[observed: <source> (<what it showed>)]` seen in a recording or product
-- `[inferred: <source>]` reasoned from observed facts
-- `[assumed]` or `[assumed: <what>]` no evidence yet
+- `[observed: <nguồn> (<nó cho thấy gì>)]` thấy trong bản ghi hoặc sản phẩm
+- `[inferred: <nguồn>]` suy ra từ dữ kiện đã quan sát
+- `[assumed]` hoặc `[assumed: <điều gì>]` chưa có bằng chứng
 
-In a list (context of use, knowledge, and so on), the last bullet can be one `- **Evidence:** [assumed]`. It counts for every item above that has no `Evidence` line of its own.
+Trong một danh sách (bối cảnh sử dụng, kiến thức, …), dòng cuối có thể là một `- **Bằng chứng:** [assumed]`. Nó tính cho mọi mục phía trên chưa có dòng Bằng chứng riêng.
 
-## Zones
+## Vùng
 
-A zone is a named place where a kind of information lives. It is defined by what it holds, never by where it sits or how it looks. The list is closed:
+Một vùng là nơi chứa một loại thông tin. Nó được định nghĩa bởi nó chứa gì, không bao giờ bởi nó nằm ở đâu hay trông thế nào. Danh sách là đóng; mỗi sản phẩm tự khai báo vùng của nó trong bảng thuật ngữ. Với Novsay chưa có vùng nào được chốt.
 
-- **request area**: what the user is preparing to send.
-- **conversation**: what the user and the system have said to each other.
-- **deck canvas**: the slides of the deck.
+Một use case có thể nói thứ gì đó được hiện, giữ hay đổi trong một vùng. Nó không được nói vùng được bố trí hay đi tới thế nào. Để thêm vùng, thêm một dòng vào bảng thuật ngữ và nói nó chứa gì.
 
-A use case may say that something is shown, kept or changed in a zone. It may not say how the zone is laid out or reached. To add a zone, add a row to the term table and say what it holds.
+## Thuật ngữ
 
-## Terms
+Dùng những từ này cho những thứ này. Thêm dòng khi cần từ mới. Không thêm từ đồng nghĩa. Một từ không bao giờ gọi tên widget, thao tác, vị trí hay kiểu dáng. Bảng này là khởi đầu, lấy từ scope V1 đã chốt; bổ sung khi khám phá.
 
-Use these words for these things. Add a row when a new term is needed. Do not add a synonym. A term never names a widget, a gesture, a position or a look.
-
-| Term | Means |
+| Thuật ngữ | Nghĩa |
 |---|---|
-| **request** | What the user sends: text, files, or both |
-| **request area** | The zone for the request the user is preparing: the request text and the attachments |
-| **request text** | The words of a request, typed, pasted or spoken |
-| **attachment** | One file or photo added to a request, with its name or preview, its type and its state |
-| **conversation** | The zone that holds the messages between the user and the system, in order |
-| **outline** | The content plan the system drafts before any slide exists. It plans the slides: each planned slide has its title and the content planned for it |
-| **confirmed outline** | An outline the user has confirmed. It is read-only |
-| **deck** | All slides of the presentation |
-| **slide** | One part of the deck that the audience sees at a time |
-| **planned slide** | One slide the outline plans. It holds a title and the planned content for that slide. It is not a built slide |
-| **deck canvas** | The zone where the system shows the slides |
-| **notice** | A short message the system gives about what happened |
-| **status message** | The text in the conversation that says what the system is doing now and how the request stands |
-| **activity** | One piece of work the system did or planned during a request. It holds what the system did, its state and the information known about its result |
-| **activity state** | What an activity has reached: planned, running, completed, failed, stopped or interrupted. Planned means the system produced a plan that names the activity; a request with no plan has no planned activity. Interrupted means the work on the activity ended before its result was confirmed, because the product ended. It is not a stop and not a failure. The interrupted state is a proposed default, not an approved owner decision |
-| **activity timeline** | The activities of one request in the order they happen. An executed activity is work that started. A planned activity is work the system planned but has not started, and it appears only when the system produced a plan. The conversation shows the activities with the status message of the request |
-| **activity detail** | The information the system shows about one activity when the user reads it. It can name an internal step, an argument or a result when that is safe to show |
-| **placeholder** | Text the system wrote because the user gave none |
-| **design system** | A set of design rules the user can choose for different decks, such as colours, fonts and a logo |
-| **default design system** | The design system the system uses when the user chose none |
-| **look** | How one deck is shown: its colours, fonts and arrangement on the slides. A look can use a design system |
-| **deck state** | The content and the look of a deck at one moment in its work. It is not a version: a version is a release of the product (`00-current-scope/`) |
-| **variant** | Another deck that exists beside a deck, for another use. It is not a deck state |
-| **chat** | One line of work with the product: its conversation and the presentation work that belongs to it. This term does not fix how many decks a chat holds. Each version sets it (`00-current-scope/VERSIONS.md`). In V1 a chat holds one deck |
-| **dashboard** | A place where the user sets up skills or models. Opening it keeps the conversation, the request text and the attachments as they were |
-| **provider configuration** | One saved connection to a model service. It is more than a key. It connects to a built-in provider or to a custom model API. It holds a provider ID, a display name and what the provider needs, such as a key. It also holds its added models |
-| **built-in provider** | A model provider that the product offers by name [BR-005]. The product knows its provider ID and its default settings |
-| **custom model API** | A model service that the user describes: its provider ID, its base URL and its API protocol. It is not a built-in provider |
-| **provider ID** | The name that identifies the provider of a provider configuration. A built-in provider has its own. The user gives one to a custom model API. It never changes after the provider configuration is saved. It is not the display name |
-| **base URL** | The address to which the system sends the requests of a provider configuration |
-| **API protocol** | The way a model service expects to be asked [BR-005]. Several custom model APIs can use the same API protocol |
-| **display name** | The name the user gives a provider configuration [BR-008]. It never says which provider the configuration connects to |
-| **model catalog** | The list of models that a provider returns when the system asks for it. It is not the list of added models. It does not show which models the user's key can run. Some providers return none |
-| **default models** | The added models that the product gives for a built-in provider, where it has them [BR-005]. The user can restore them |
-| **model ID** | The name by which a provider identifies one of its models |
-| **added model** | A model ID that the user added to one provider configuration. It comes from the model catalog or is given by hand. It belongs to that provider configuration only. Saving it does not show that the provider runs it |
-| **selectable model** | An added model that the user can choose for a chat [BR-005]. Being selectable does not show that the provider runs it |
-| **selected model** | The added model chosen for one chat. Each chat has its own. It runs a new request only while it is selectable |
-| **try again** | An option the system offers after its work failed or was stopped. Only the user starts it. The system never tries again by itself. The term does not say what work runs again. It means neither the whole work, nor only the missing part, nor undoing what was done. The use case that owns the work says what runs again. Examples: draft the outline again, build the slides again from the confirmed outline, apply the change again. If that use case does not say it, it stays an open question |
-| **edit the request** | The user takes the sent request back into the request area, changes it, and sends it again |
-| **pattern** | An earlier deck the user gives so the system follows its structure. It gives no content and no look |
+| **tài khoản** | Danh tính của người dùng để truy cập và giữ dữ liệu riêng |
+| **truyện** | Một tác phẩm dài nhiều chương. Tiến độ được giữ theo từng truyện |
+| **chương** | Một phần của truyện. Người dùng nhận link chương công khai |
+| **nguồn** | Website cung cấp nội dung truyện. V1: Novel543 |
+| **nội dung chương** | Văn bản lấy được từ một chương |
+| **audio** | Bản đọc (TTS) của nội dung chương, được chuẩn bị mới hoặc dùng lại |
+| **tiến độ** | Vị trí nghe đã lưu của một truyện |
+| **nghe nền** | Phát audio vẫn tiếp tục khi chuyển app, tắt màn hình hoặc khóa máy |
+| **gián đoạn** | Sự kiện làm audio dừng. Khi nghe lại, lùi tối đa 5 giây so với vị trí dừng |
+| **giọng đọc** | Giọng TTS được chọn để đọc nội dung |
+| **dịch** | Việc chuyển nội dung sang ngôn ngữ đọc. Còn mở: đọc nguyên bản hay dịch rồi đọc |
 
-## How to check
+## Cách kiểm tra
 
-No tooling exists yet, so review does it. There are two checks.
+Chưa có công cụ, nên review làm việc này. Có hai nhóm kiểm tra.
 
-**Words.** Run this on the **System** and **When** fields and on **Situation and goal**. Each hit is fixed or has a stated reason.
+**Từ ngữ.** Chạy trên các trường `Hệ thống` và `Khi`, và trên `Tình huống và mục tiêu`. Mỗi kết quả được sửa hoặc ghi lý do. (Lưu ý: không dùng `\b` vì nó không chạy với dấu tiếng Việt.)
 
 ```
-grep -nEi '(handl(e|es|ed|ing)|manag(e|es|ed|ing)|support(s|ed)?|process(es|ed|ing)?|ensur(e|es|ed)|properly|gracefully|appropriate(ly)?|may|might|should|could)'
+xử lý|quản lý|hỗ trợ|đảm bảo|thực hiện|tiến hành|phù hợp|đúng cách|mượt mà|có thể|có lẽ|nên
 ```
 
-**Interface (rule 11).** Run this on the whole use case, except the frontmatter, the generated block and the `Research card` line. Each hit is rewritten as an intent or a response. A hit that is not interface language (for example "right" in "right-to-left script") has a stated reason.
+**Giao diện (quy tắc 11).** Chạy trên toàn use case, trừ frontmatter, khối sinh tự động và dòng `Thẻ nghiên cứu`. Mỗi kết quả được viết lại thành ý định hoặc phản hồi. Một kết quả không phải ngôn ngữ giao diện (ví dụ "phải" trong "chữ viết từ phải sang trái") có lý do ghi rõ.
 
 ```
-grep -nEi '(button|click(s|ed)?|tap(s|ped)?|press(es|ed)?|hover(s|ed)?|drag(s|ged)?|swipe|scroll(s|ed|ing)?|menu|dropdown|drop-down|picker|dialog|modal|pop-?up|overlay|window|tab|toolbar|sidebar|panel|strip|thumbnail|card|pill|icon|toggle|checkbox|controls?|selector|screen|page|dimm?(ed)?|highlight(ed)?|grey|gray|red|green|bottom|top|left|right|above|below|corner|box|field|label)'
+nút|bấm|nhấn|chạm|vuốt|cuộn|menu|dropdown|hộp thoại|popup|tab|sidebar|thanh công cụ|thẻ|chip|biểu tượng|toggle|checkbox|màn hình|trang|góc|bên trên|bên dưới|trái|phải|nhãn|trường nhập
 ```
 
-Then apply the **swap test** to each sentence: picture the same product with another interface, such as touch only, voice only, or a different layout. If the sentence is still true, it passes. If it is not, it describes the interface and is rewritten.
+Sau đó áp dụng **phép thử hoán đổi** cho từng câu: hình dung cùng sản phẩm với giao diện khác, ví dụ chỉ chạm hoặc chỉ giọng nói. Nếu câu vẫn đúng, nó qua. Nếu không, nó mô tả giao diện và được viết lại.
