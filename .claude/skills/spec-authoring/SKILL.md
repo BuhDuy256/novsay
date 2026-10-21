@@ -1,69 +1,50 @@
 ---
 name: spec-authoring
-description: Write or rewrite a use case (docs/spec/03-use-cases) or user segment (docs/spec/02-users) file so it follows its folder's template, its criteria and the plain-English style guide. Use when creating a spec file, converting an older one to the current template, or fixing style findings. Not for deciding scope, and not for inventing product behavior.
+description: Viết hoặc viết lại một file use case (docs/spec/02-use-cases) sao cho theo đúng template, criteria và style tiếng Việt của folder. Dùng khi tạo file spec, chuyển file cũ sang template mới, hoặc sửa lỗi style. Không dùng để quyết phạm vi hay bịa hành vi sản phẩm.
 ---
 
 # Spec authoring
 
-The rules live in three files. Read them before writing. Do not restate them in the spec or in this skill.
+Quy tắc nằm ở ba file. Đọc trước khi viết; đừng viết lại chúng trong spec hay trong skill này.
 
-- `docs/spec/<folder>/_TEMPLATE.md`: the structure and fixed field names.
-- `docs/spec/<folder>/_CRITERIA.md`: the criteria the file must meet.
-- `docs/spec/_STYLE.md`: plain English rules, evidence tags, zones, the term table, and the interface check (rule 11).
+- `docs/spec/<folder>/_TEMPLATE.md`: cấu trúc và tên trường cố định.
+- `docs/spec/<folder>/_CRITERIA.md`: tiêu chí file phải đạt.
+- `docs/spec/_STYLE.md`: quy tắc tiếng Việt, thẻ bằng chứng, bảng thuật ngữ, và kiểm giao diện (quy tắc 11).
 
-## Content sources
+## Nguồn nội dung
 
-Write only what comes from the user, from the file being rewritten, or from the research cards in `docs/research/`. If a step needs behavior from none of these, mark it `[assumed]` and say so in the report. Do not invent it.
+Chỉ viết điều đến từ người dùng, từ file đang viết lại, hoặc từ thẻ nghiên cứu trong `docs/research/`. Nếu một bước cần hành vi không từ nguồn nào, đánh dấu `[assumed]` và nói trong báo cáo. Đừng bịa.
 
-A use case explores behaviors the product could perform. A flow taken from a research card or a reference product is allowed. Its evidence says where it came from. It is not a commitment to build it.
+Use case khám phá hành vi sản phẩm có thể làm. Flow lấy từ thẻ nghiên cứu hay sản phẩm tham chiếu được phép; bằng chứng nói nó đến từ đâu; nó không phải cam kết xây.
 
-The `versions` field of a use case belongs to the owner. Copy it exactly. Never add, remove or reorder a version or a flow in it unless the task asks for that change. Never select a flow because a research card shows it.
+Đừng viết FR hay thay `FR-?` bằng ID thật trừ khi việc yêu cầu. Use case không có trường trạng thái, không tiến độ cài đặt.
 
-Do not write functional requirements or replace `FR-?` with a real ID unless the task asks for it. Such a task covers only flows that a version selects. Use cases have no `status` field and hold no implementation progress.
+## File mới
 
-## References between use cases
+1. Copy `_TEMPLATE.md` của folder. ID use case: lấy số sau ID cao nhất trong `02-use-cases/` và trong ID đã loại bỏ (`02-use-cases/_CRITERIA.md`). Không dùng lại, chuyển hay đánh lại số.
+2. Điền mọi phần. Viết yêu cầu/quy tắc/mục tiêu chưa viết thành marker `?`. Bỏ phần template đánh dấu bỏ được khi trống.
+3. Chạy các kiểm style bên dưới.
 
-`_CRITERIA.md` (Related use cases, Requirements traceability) defines the rules. Keep three relations apart:
+## Viết lại file có sẵn
 
-- **Invocation:** `includes` runs the main flow of the other use case. Each step that runs part of it names that step.
-- **Behavior reference:** "as UC-xxx Sx says" or "as in UC-xxx Ax" reuses wording only. Never read it as a scope dependency, a flow selection or a requirement trace.
-- **Scope dependency:** only `includes`, `extended_by`, an `End` to another use case, or a precondition declares one. Report a dependency you find. Never add a flow to `versions` for it.
+1. Giữ mọi ID, mọi trích dẫn (`FR-`, `[BR-`, `[NFR-`), frontmatter, nội dung bằng chứng và logic. Nếu quy tắc style buộc đổi nghĩa, đừng chọn lặng lẽ: đổi nhỏ nhất và ghi vào báo cáo.
+2. Chuyển nội dung vào block và trường của template.
+3. Chạy các kiểm style.
+4. So trước/sau: cùng ID, cùng trích dẫn, cùng liên kết nghiên cứu.
+5. Một cụm giao diện có thể mang yêu cầu. Dịch nó, đừng chỉ xóa. Hỏi điều gì vẫn đúng khi giao diện đổi: "một nút Phát ở góc dưới" thành "người dùng yêu cầu phát; hệ thống phát audio từ tiến độ đã lưu". Cụm chỉ là thiết kế (vị trí, màu, nhãn) thì xóa và ghi vào báo cáo như quyết định UI không chỗ.
 
-Write `Reqs: none` only in a step that runs part of an included use case, when the block `System` names gives the whole response. A behavior reference in any other block keeps `FR-?` or FR IDs. A block that adds its own response traces only its own part. Never write a reference in `Reqs`, and never write a second FR for a response an FR already covers.
+## Kiểm style
 
-When you change the `System` of a block, search `docs/spec/` for references to it (`UC-xxx Sx`, `UC-xxx.Sx`). Change a referring block only when its meaning no longer holds. List every reference you reviewed in the report.
+- Tìm trong `Hệ thống`, `Khi` và `Tình huống và mục tiêu` mẫu từ cấm trong `_STYLE.md`. Sửa hoặc ghi lý do.
+- Tách câu dài thành một hành động một câu.
+- Kiểm mỗi thuật ngữ trong văn bản có trong bảng thuật ngữ; mỗi trường tối đa 7 dòng.
+- Kiểm thẻ bằng chứng ở dòng riêng.
+- Use case: chạy kiểm giao diện trong `_STYLE.md` (quy tắc 11, UCG-09) trên toàn file trừ frontmatter và khối sinh tự động. Viết lại mỗi kết quả thành ý định hoặc phản hồi, rồi áp dụng phép thử hoán đổi cho mọi câu Người dùng, Khi, Hệ thống.
 
-## New file
+## Use case: kết thúc bằng sơ đồ
 
-1. Copy the folder's `_TEMPLATE.md`. Use cases: take the ID after the highest use case ID in `03-use-cases/` and in its retired IDs (`03-use-cases/_CRITERIA.md`, Use case IDs). Never reuse, move or renumber a use case ID; only an owner decision recorded there can renumber. Segments: take the next free ID.
-2. Fill every section. Write unwritten requirements, rules and quality targets as the `?` markers the criteria define. Remove sections the template marks as removable when they are empty.
-3. Apply the style checks below.
+Sau lần sửa cuối một use case, chạy [use-case-sequence](../use-case-sequence/SKILL.md) trên file. Đừng sửa khối sinh tự động bằng tay.
 
-## Rewrite an existing file
+## Báo cáo
 
-1. Keep every ID, every citation (`FR-`, `[BR-`, `[NFR-`), the frontmatter, the evidence content, and the logic. If a style rule forces a meaning change, do not choose silently: make the smallest change and list it in the report.
-2. Move the content into the template's blocks and fields.
-3. Apply the style checks below.
-4. Compare before and after: the same IDs, the same citations, the same research links.
-5. A UI phrase can carry a requirement. Translate it, do not just delete it. Ask what stays true if the interface changes: "as an overlay" becomes "the conversation, the request text and the attachments stay as they were". A phrase that is only design (a position, a colour, a label) is removed and listed in the report as a UI decision with no home.
-
-## Style checks
-
-- Search the `System`, `When` and `Situation and goal` text for the banned-word pattern in `_STYLE.md`. Fix each hit or give a reason.
-- Find sentences over 20 words (citations in `[ ]` do not count) and split them.
-- Check that each term in the text is from the term table, and that no field has more than 7 bullets.
-- Check that evidence tags are on their own `Evidence` line.
-- Check that every `###` block ends with `Updated at`. Set it to today's date (`dd-mm-yyyy`) on each block you wrote or changed. Keep the date of a block you did not change (U-14, UCG-14).
-- Use cases only: run the interface check in `_STYLE.md` (rule 11, UCG-13) on the whole file except the frontmatter, the generated block and the `Research card` line. Rewrite each hit as an intent or a response, then apply the swap test to every `User`, `When` and `System` sentence. Evidence text follows the same rule: describe what the product did, not what it looked like or what its control was called. A zone is the only place name allowed.
-
-## Use cases: finish with the flowchart
-
-After the last edit to a use case, run [use-case-flowchart](../use-case-flowchart/SKILL.md) on the file. Do not edit the generated block by hand.
-
-## User segments
-
-Follow `docs/spec/02-users/_TEMPLATE.md`: one block per need and per hypothesis, bullets for knowledge, context, pain points and limits. Keep the frontmatter as it is. Keep every need and hypothesis ID and every "Use cases" and "Handled by" value. Give each block a short name (5 words or fewer) taken from its content. When a closing `Evidence` bullet covers a list, check that no item in it has a different tag.
-
-## Report
-
-List: the files changed, the checks run and their results, every place where a style rule changed a meaning, every UI phrase that carried a requirement and how you wrote it, every UI decision removed with no home, every `[assumed]` you added, and every reference you reviewed after a change to `System`.
+Liệt kê: file đã đổi, kiểm đã chạy và kết quả, mỗi chỗ quy tắc style đổi nghĩa, mỗi cụm UI mang yêu cầu và cách viết lại, mỗi quyết định UI bị xóa không chỗ, mỗi `[assumed]` thêm, mỗi tham chiếu đã xem sau khi đổi Hệ thống.
