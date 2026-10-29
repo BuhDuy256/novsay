@@ -48,15 +48,15 @@ mở file, điền nội dung vào phần `<!-- Điền kết quả -->` hoặc 
 
 | # | Câu hỏi | Vì sao quan trọng | Ticket | Trạng thái |
 |---|---|---|---|---|
-| RQ-1 | Cấu trúc URL chương trên Novel543 như thế nào? Quy tắc nào phân biệt link chương với link trang chủ, thư mục truyện hoặc trang khác? | FR-001 AC-1/AC-2: cần regex hoặc pattern để nhận/từ chối link. BR-001 V-2 nói link chương công khai nhưng chưa xác định pattern. | [#2](https://github.com/BuhDuy256/novsay/issues/2) | answered |
+| RQ-1 | Cấu trúc URL chương trên website nguồn như thế nào? Quy tắc nào phân biệt link chương với link trang chủ, thư mục truyện hoặc trang khác? | FR-001 AC-1/AC-2: cần regex hoặc pattern để nhận/từ chối link. BR-001 V-2 nói link chương công khai nhưng chưa xác định pattern. | [#2](https://github.com/BuhDuy256/novsay/issues/2) | answered |
 | RQ-2 | Làm thế nào để ngăn link hoặc chuyển hướng truy cập vào mạng riêng của server (SSRF prevention)? | FR-001 AC-3: phải từ chối đích không công khai. Cần biết cách kiểm tra IP sau DNS resolution. | [#3](https://github.com/BuhDuy256/novsay/issues/3) | answered |
 
 ### FR-002 — Lấy một chương
 
 | # | Câu hỏi | Vì sao quan trọng | Ticket | Trạng thái |
 |---|---|---|---|---|
-| RQ-3 | Novel543 trả nội dung chương bằng HTML tĩnh, JavaScript render hay API riêng? Cấu trúc HTML của trang chương (selector cho tiêu đề và vùng truyện) là gì? | FR-002 AC-1: cần biết cách tách văn bản truyện khỏi quảng cáo/điều hướng/bình luận. Quyết định dùng HTML parser hay headless browser. | [#4](https://github.com/BuhDuy256/novsay/issues/4) | open |
-| RQ-4 | Novel543 có cơ chế chống bot (Cloudflare, CAPTCHA, rate limit) không? Fetch từ backend Node có bị chặn không? | FR-002 AC-1/AC-3, FR-007: ảnh hưởng khả năng lấy chương và chiến lược retry. | [#5](https://github.com/BuhDuy256/novsay/issues/5) | open |
+| RQ-3 | Website nguồn trả nội dung chương bằng HTML tĩnh, JavaScript render hay API riêng? Cấu trúc HTML (selector tiêu đề, vùng truyện) là gì và xử lý multi-site thế nào? | FR-002 AC-1: cần biết cách tách văn bản truyện khỏi quảng cáo/điều hướng/bình luận. Quyết định dùng HTML parser hay headless browser. Cần site config cho mỗi website nguồn. | [#4](https://github.com/BuhDuy256/novsay/issues/4) | open |
+| RQ-4 | Website nguồn có cơ chế chống bot (Cloudflare, CAPTCHA, rate limit) không? Fetch từ backend Node có bị chặn không? | FR-002 AC-1/AC-3, FR-007: ảnh hưởng khả năng lấy chương và chiến lược retry. Mỗi site có thể có cơ chế khác nhau. | [#5](https://github.com/BuhDuy256/novsay/issues/5) | open |
 
 ### FR-004 — Chuẩn bị audio chương
 

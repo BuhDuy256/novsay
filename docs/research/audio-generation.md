@@ -17,7 +17,7 @@ updated-at: "29-10-2026"
 - **Blocked by:** [#6](https://github.com/BuhDuy256/novsay/issues/6) (RQ-5: cần biết provider để biết giới hạn)
 
 <!-- Điền kết quả nghiên cứu ở đây. Bao gồm:
-- Độ dài ký tự trung bình của một chương Novel543 (lấy mẫu vài chương)
+- Độ dài ký tự trung bình của một chương truyện web (lấy mẫu vài chương từ các website nguồn)
 - Giới hạn đầu vào của provider đã chọn (từ DEC-001)
 - Chiến lược chunking nếu cần: chia theo đoạn, theo câu, hay theo ký tự
 - Cách ghép audio chunks: nối file, crossfade, hay streaming

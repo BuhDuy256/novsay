@@ -7,9 +7,9 @@ updated-at: "29-10-2026"
 
 # Lấy nội dung website
 
-## UC-001/RQ-1: Cấu trúc URL chương trên Novel543 như thế nào?
+## UC-001/RQ-1: Cấu trúc URL chương trên website nguồn
 
-> Quy tắc nào phân biệt link chương với link trang chủ, thư mục truyện hoặc trang khác?
+> Quy tắc nào phân biệt link chương với link trang chủ, thư mục truyện hoặc trang khác trên các website tiểu thuyết?
 
 * **Phục vụ:** FR-001 AC-1/AC-2, BR-001 V-2
 * **Ticket:** [#2](https://github.com/BuhDuy256/novsay/issues/2)
@@ -18,7 +18,7 @@ updated-at: "29-10-2026"
 1. Một website sẽ luôn có nhiều loại trang: Homepage, Landing Page, Table of Contents, Search Page and other pages.
 
 2. URL của 1 Page có các attributes sau cần quan tâm:
-    - **Hostname**: Là novel543.com, hay là www.novel543.com, hay là gì khác?
+    - **Hostname**: Thuộc website nguồn nào? (ví dụ: novel543.com, www.novel543.com)
     - **Cấu trúc path** của một link chương?
     - **Dấu hiệu phân biệt link** giữa nhiều loại pages của website đó?
     - **Các biến thể hợp lệ** như URL có query, có `/` cuối hoặc dạng gì đó khác?
@@ -76,10 +76,10 @@ updated-at: "29-10-2026"
 
 ---
 
-## UC-001/RQ-3: Cấu trúc HTML trang chương Novel543
+## UC-001/RQ-3: Cấu trúc HTML trang chương website nguồn
 
-> Novel543 trả nội dung chương bằng HTML tĩnh, JavaScript render hay API riêng?
-> Cấu trúc HTML của trang chương (selector cho tiêu đề và vùng truyện) là gì?
+> Website nguồn trả nội dung chương bằng HTML tĩnh, JavaScript render hay API riêng?
+> Cấu trúc HTML của trang chương (selector cho tiêu đề và vùng truyện) là gì? Mỗi site có selector khác nhau thì xử lý thế nào?
 
 * **Phục vụ:** FR-002 AC-1
 * **Ticket:** [#4](https://github.com/BuhDuy256/novsay/issues/4)
@@ -92,11 +92,37 @@ updated-at: "29-10-2026"
 * Các element cần loại bỏ (quảng cáo, điều hướng, bình luận)
 -->
 
+1. Website content có thể được hình thành theo nhiều cách khác nhau:
+
+| Trường hợp | Website hoạt động thế nào? | Hướng lấy nội dung |
+|---|---|---|
+| Có sẵn trong HTML | Response HTML đã chứa văn bản chương | Phân tích HTML và lấy vùng truyện |
+| Được JavaScript thêm vào | HTML ban đầu chưa có truyện; JavaScript chạy rồi thêm nội dung | Tìm cách lấy dữ liệu hoặc dùng trình duyệt tự động |
+| Được lấy qua API riêng | Trang gọi một endpoint khác để lấy dữ liệu chương | Xem xét gọi endpoint đó nếu phù hợp |
+
+2. Một content của một trang truyện có thể gồm nhiều phần: "Title", "Truyện", "Menu", "Advertisement" và "Nút chuyển trang"
+=> **Làm sao xác định đúng "Title" và "Truyện"?**
+
+3. Cần nhớ về cấu trúc của HTML để hiểu cách xử lí?
+
+```
+<h1 class="chapter-title">Chương 1</h1>
+
+<div id="chapter-content">
+  <p>Đoạn truyện thứ nhất...</p>
+  <p>Đoạn truyện thứ hai...</p>
+</div>
+
+<a href="...">Chương tiếp theo</a>
+```
+=> Ta sẽ dựa vào "chapter-title" hay gọi là các **selector** của các HTML tag attributes như class, id, ... để xác định content nằm ở đâu?
+=> Mỗi website nguồn có selector khác nhau → cần **site config** chứa selector riêng cho từng site (hostname → {titleSelector, contentSelector, removeSelectors}).
+
 ---
 
-## UC-001/RQ-4: Cơ chế chống bot của Novel543
+## UC-001/RQ-4: Cơ chế chống bot của website nguồn
 
-> Fetch từ backend Node có bị chặn không? Có Cloudflare, CAPTCHA, rate limit không?
+> Website nguồn có cơ chế chống bot (Cloudflare, CAPTCHA, rate limit) không? Fetch từ backend Node có bị chặn không?
 
 * **Phục vụ:** FR-002 AC-1/AC-3, FR-007
 * **Ticket:** [#5](https://github.com/BuhDuy256/novsay/issues/5)

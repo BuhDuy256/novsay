@@ -2,6 +2,15 @@
 
 ## [Unreleased]
 
+### Changed
+- Product vision: Novsay is now a web novel listening platform, not a generic TTS tool
+  - VIS-001: identity updated to "nền tảng nghe truyện web", added B-2 boundary
+  - BR-001 V-1: changed from closed set (Novel543 only) to open set (any supported
+    novel site, with per-site config); Novel543 is the first supported source
+  - UC-001, _STYLE.md: replaced hardcoded Novel543 references with "website nguồn"
+- Research questions RQ-1, RQ-3, RQ-4 reframed from Novel543-specific to multi-site
+- GitHub issues #1, #2, #4, #5 updated to match multi-site scope
+
 ### Fixed
 - `.claude/skills` was a plain file (path reference) instead of a directory — replaced
   with synced skill mirrors so Claude Code CLI discovers all 15 skills via `/` commands

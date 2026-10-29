@@ -47,7 +47,7 @@ Dùng những từ này cho những thứ này. Thêm dòng khi cần từ mới
 | **tài khoản** | Danh tính của người dùng để truy cập và giữ dữ liệu riêng |
 | **truyện** | Một tác phẩm dài nhiều chương |
 | **chương** | Một phần của truyện. Người dùng nhận link chương công khai |
-| **nguồn** | Website cung cấp nội dung truyện. V1: Novel543 |
+| **nguồn** | Website tiểu thuyết được hỗ trợ, cung cấp nội dung truyện |
 | **văn bản truyện** | Văn bản lấy được từ một chương, được xem trước khi nghe |
 | **transcript** | Văn bản truyện đã được owner xác nhận bằng hành động nghe. Audio đọc đúng transcript này |
 | **audio** | Bản đọc (TTS) của transcript, được chuẩn bị mới hoặc dùng lại |
