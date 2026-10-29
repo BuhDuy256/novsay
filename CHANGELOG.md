@@ -2,7 +2,13 @@
 
 ## [Unreleased]
 
+### Fixed
+- `.claude/skills` was a plain file (path reference) instead of a directory — replaced
+  with synced skill mirrors so Claude Code CLI discovers all 15 skills via `/` commands
+- Added "Known mistakes" section to `CLAUDE.md` to prevent recurring errors
+
 ### Added
+- Synced skill mirrors to `.claude/skills/` and `.codex/skills/` (15 skills each)
 - Build workflow (`WORKFLOW.md`): 6-phase process from spec to working code
   (research, testing plan, implementation plan, tickets, execution, verification)
 - `AGENTS.md`: project overview, workflow reference, skill routing, ticket rules
