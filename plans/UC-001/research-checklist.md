@@ -55,7 +55,7 @@ mở file, điền nội dung vào phần `<!-- Điền kết quả -->` hoặc 
 
 | # | Câu hỏi | Vì sao quan trọng | Ticket | Trạng thái |
 |---|---|---|---|---|
-| RQ-3 | Website nguồn trả nội dung chương bằng HTML tĩnh, JavaScript render hay API riêng? Cấu trúc HTML (selector tiêu đề, vùng truyện) là gì và xử lý multi-site thế nào? | FR-002 AC-1: cần biết cách tách văn bản truyện khỏi quảng cáo/điều hướng/bình luận. Quyết định dùng HTML parser hay headless browser. Cần site config cho mỗi website nguồn. | [#4](https://github.com/BuhDuy256/novsay/issues/4) | open |
+| RQ-3 | Website nguồn trả nội dung chương bằng HTML tĩnh, JavaScript render hay API riêng? Cấu trúc HTML (selector tiêu đề, vùng truyện) là gì và xử lý multi-site thế nào? | FR-002 AC-1: cần biết cách tách văn bản truyện khỏi quảng cáo/điều hướng/bình luận. Quyết định dùng HTML parser hay headless browser. Cần site config cho mỗi website nguồn. | [#4](https://github.com/BuhDuy256/novsay/issues/4) | answered |
 | RQ-4 | Website nguồn có cơ chế chống bot (Cloudflare, CAPTCHA, rate limit) không? Fetch từ backend Node có bị chặn không? | FR-002 AC-1/AC-3, FR-007: ảnh hưởng khả năng lấy chương và chiến lược retry. Mỗi site có thể có cơ chế khác nhau. | [#5](https://github.com/BuhDuy256/novsay/issues/5) | open |
 
 ### FR-004 — Chuẩn bị audio chương

@@ -2,7 +2,16 @@
 
 ## [Unreleased]
 
+### Added
+- `docs/research/_STYLE.md`: writing style guide for research notes, enforced via
+  `AGENTS.md` key paths table so all agents follow consistent style
+- RQ-4 anti-bot research: tested novel543.com and 10 alternative Chinese novel sites,
+  discovered TLS fingerprinting as the primary blocking mechanism (Cloudflare
+  distinguishes curl/Schannel from Node.js/OpenSSL via JA3/JA4)
+
 ### Changed
+- RQ-3 status → answered in research checklist
+- `AGENTS.md` key paths: Research row now references `_STYLE.md`
 - Product vision: Novsay is now a web novel listening platform, not a generic TTS tool
   - VIS-001: identity updated to "nền tảng nghe truyện web", added B-2 boundary
   - BR-001 V-1: changed from closed set (Novel543 only) to open set (any supported

@@ -79,7 +79,7 @@ Tickets assigned to flash models (DeepSeek V4.1 Flash, GLM 5.3 Flash) must:
 | What | Where |
 |---|---|
 | Product spec | `docs/spec/` |
-| Research | `docs/research/` |
+| Research | `docs/research/` (read `docs/research/_STYLE.md` before writing) |
 | Decisions | `docs/decisions/` |
 | Plans | `plans/` |
 | Plan templates | `plans/_TEMPLATES/` |
