@@ -7,7 +7,7 @@ updated-at: "29-10-2026"
 
 # Đăng nhập và quyền truy cập
 
-## **RQ-14:** Làm thế nào để giữ API key của TTS provider và các secret khỏi mã chạy trên trình duyệt?
+## UC-001/RQ-14: Bảo vệ API key và secret
 
 - **Phục vụ:** NFR-002 M-1
 - **Ticket:** #15

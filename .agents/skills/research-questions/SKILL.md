@@ -39,11 +39,20 @@ Create `plans/UC-XXX/research-checklist.md` from the template at
 `plans/_TEMPLATES/research-checklist.md`.
 
 Group questions by FR/NFR. Each question has:
-- A unique ID: `RQ-N`
+- A unique ID: `RQ-N` (scoped to this UC)
 - The question text
 - Why it matters (which FR/AC)
 - Status: `open`, `answered`, or `decided`
 - Options table (for technical choices)
+
+Create deliverable files for each question:
+- **Research answer:** add a section `## UC-XXX/RQ-N: Title` to the matching topic
+  file in `docs/research/`. Research files are **topic-based containers** — one file
+  per topic, questions from multiple UCs accumulate in the same file.
+- **Decision record:** create `docs/decisions/DEC-NNN-topic.md` from the template at
+  `docs/decisions/_TEMPLATE.md`, with options pre-filled.
+
+Include a **deliverable map** table in the checklist linking each RQ to its file.
 
 ## Rules
 

@@ -7,7 +7,7 @@ updated-at: "29-10-2026"
 
 # Yêu cầu chuẩn bị và lỗi
 
-## **RQ-12:** Làm thế nào để owner quay lại app và thấy trạng thái yêu cầu chuẩn bị?
+## UC-001/RQ-12: Thiết kế trạng thái yêu cầu chuẩn bị
 
 > Đang chạy, xong, thất bại — mà không tạo yêu cầu trùng.
 

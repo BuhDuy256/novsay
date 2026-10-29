@@ -110,17 +110,6 @@ mở file, điền nội dung vào phần `<!-- Điền kết quả -->` hoặc 
 | RQ-15 | Ngôn ngữ, runtime, framework frontend và backend nào dùng cho Novsay? | Quyết định nền tảng ảnh hưởng mọi ticket implementation. Cần chọn trước khi lên kế hoạch. | #16 | open |
 | RQ-16 | Hosting nào (Vercel, Railway, Fly.io, Cloudflare Workers, VPS) đáp ứng yêu cầu? Chi phí dự kiến? | Ảnh hưởng execution model (RQ-9), storage (RQ-10), deployment pipeline. | #17 | open |
 
-## Câu hỏi đã trả lời từ nghiên cứu trước
-
-Các câu hỏi dưới đây đã có đáp án trong `docs/research/web-content.md`:
-
-| # gốc | Nội dung | Phục vụ | Trạng thái |
-|---|---|---|---|
-| Q-001 | Luồng fetch từ code tới response | FR-002 | answered |
-| Q-002 | Tách tiêu đề và văn bản truyện khỏi quảng cáo, điều hướng, bình luận | FR-002 | answered |
-| Q-003 | Nhận biết nội dung thiếu hoặc không phải chương truyện | FR-002 | answered |
-| Q-004 | Giữ đúng ký tự, dấu câu, thứ tự đoạn đa ngôn ngữ | FR-002 | decided (coding agents xử lý) |
-
 ## Trạng thái
 
 - `open` — chưa bắt đầu

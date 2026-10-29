@@ -7,7 +7,7 @@ updated-at: "29-10-2026"
 
 # Tạo audio
 
-## **RQ-6:** Transcript một chương dài bao nhiêu ký tự? Provider có giới hạn đầu vào không?
+## UC-001/RQ-6: Chunking transcript dài cho TTS
 
 > Nếu phải chia, làm thế nào để ghép audio không thiếu/lặp/đảo?
 

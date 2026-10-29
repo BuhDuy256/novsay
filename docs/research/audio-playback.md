@@ -7,7 +7,7 @@ updated-at: "29-10-2026"
 
 # Phát audio
 
-## **RQ-7:** Định dạng audio đầu ra nào dùng được trên cả Windows Chrome và iPhone Safari?
+## UC-001/RQ-7: Định dạng audio tương thích cross-platform
 
 > MP3, OGG, WAV, AAC — định dạng nào, kể cả khi phát nền?
 
@@ -24,7 +24,7 @@ updated-at: "29-10-2026"
 
 ---
 
-## **RQ-13:** Làm thế nào để audio tiếp tục phát khi chuyển app, tắt màn hình hoặc khóa máy?
+## UC-001/RQ-13: Phát audio nền trên iPhone Safari và Windows Chrome
 
 > Trên iPhone Safari và Windows Chrome.
 

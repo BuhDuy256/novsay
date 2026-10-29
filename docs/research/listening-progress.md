@@ -7,7 +7,7 @@ updated-at: "29-10-2026"
 
 # Tiến độ nghe
 
-## **RQ-8:** Lưu tiến độ ở đâu và bằng cơ chế nào?
+## UC-001/RQ-8: Cơ chế lưu và khôi phục tiến độ nghe
 
 > Đảm bảo khôi phục sau gián đoạn đột ngột trên cùng thiết bị, lùi tối đa 5 giây.
 

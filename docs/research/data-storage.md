@@ -7,7 +7,7 @@ updated-at: "29-10-2026"
 
 # Lưu dữ liệu
 
-## **RQ-11:** Làm thế nào để xác định audio tương thích?
+## UC-001/RQ-11: Logic xác định audio tương thích
 
 > Khớp transcript, cùng cấu hình tạo audio, còn dùng được. Dùng hash transcript hay so ký tự?
 
