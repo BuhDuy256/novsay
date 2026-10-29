@@ -51,9 +51,28 @@ updated-at: "29-10-2026"
 
 * **Phục vụ:** FR-001 AC-3
 * **Ticket:** [#3](https://github.com/BuhDuy256/novsay/issues/3)
-* **Trạng thái:** open
+* **Trạng thái:** answered
 
-<!-- Điền kết quả nghiên cứu ở đây. -->
+1. Context ở đây là Attacker có thể lạm dụng Novsay để tổ chức tấn công tới các address của internal service mà user không truy cập được. Ví dụ:
+1.1. 127.0.0.1: chính server đang chạy Novsay. Cụ thể hơn:
+    - Giả sử kẻ tấn công nhập URL sau vào ô lấy chương: `http://127.0.0.1:9000/admin`
+    - Nếu Novsay không kiểm tra đích truy cập:
+        1. Server Novsay nhận URL.
+        2. Server Novsay gửi request tới cổng 9000 trên chính nó.
+        3. Trang quản trị nhận request từ nội bộ và trả nội dung.
+        4. Nếu Novsay trả nội dung đó cho người nhập URL, dữ liệu quản trị có thể bị lộ.
+1.2. Địa chỉ mạng riêng: có thể chứa database hoặc dịch vụ nội bộ.
+1.3. Một số địa chỉ đặc biệt của môi trường hosting: có thể cung cấp thông tin của máy chủ.
+
+2. Các vấn đề từ proposed solutions:
+
+| Phương án | Cách làm | Điều cần xem xét |
+|---|---|---|
+| Dùng thư viện "ssrf-req-filter" (npm) | Nhờ thư viện thực hiện một phần kiểm tra SSRF | Phải xác minh khả năng bảo vệ và tương thích với HTTP client |
+| Tự kiểm tra IP | Tự giải DNS và kiểm tra các nhóm địa chỉ | Phải xử lý IPv4, IPv6 và thay đổi DNS |
+| Allowlist hostname + kiểm tra IP (Whilelist) | Chỉ nhận hostname đã cho phép, đồng thời kiểm tra đích kết nối | Cần cập nhật khi thêm nguồn truyện |
+
+3. **Có thể triển khai Hybrid**: Library + Whitelist
 
 ---
 

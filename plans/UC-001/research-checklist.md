@@ -49,7 +49,7 @@ mở file, điền nội dung vào phần `<!-- Điền kết quả -->` hoặc 
 | # | Câu hỏi | Vì sao quan trọng | Ticket | Trạng thái |
 |---|---|---|---|---|
 | RQ-1 | Cấu trúc URL chương trên Novel543 như thế nào? Quy tắc nào phân biệt link chương với link trang chủ, thư mục truyện hoặc trang khác? | FR-001 AC-1/AC-2: cần regex hoặc pattern để nhận/từ chối link. BR-001 V-2 nói link chương công khai nhưng chưa xác định pattern. | [#2](https://github.com/BuhDuy256/novsay/issues/2) | answered |
-| RQ-2 | Làm thế nào để ngăn link hoặc chuyển hướng truy cập vào mạng riêng của server (SSRF prevention)? | FR-001 AC-3: phải từ chối đích không công khai. Cần biết cách kiểm tra IP sau DNS resolution. | [#3](https://github.com/BuhDuy256/novsay/issues/3) | open |
+| RQ-2 | Làm thế nào để ngăn link hoặc chuyển hướng truy cập vào mạng riêng của server (SSRF prevention)? | FR-001 AC-3: phải từ chối đích không công khai. Cần biết cách kiểm tra IP sau DNS resolution. | [#3](https://github.com/BuhDuy256/novsay/issues/3) | answered |
 
 ### FR-002 — Lấy một chương
 
