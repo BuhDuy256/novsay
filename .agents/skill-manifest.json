@@ -228,6 +228,22 @@
         "SKILL.md"
       ],
       "status": "installed"
+    },
+    {
+      "name": "commit-push",
+      "source_repository": "repository-local",
+      "source_path": null,
+      "installed_path": ".agents/skills/commit-push",
+      "decision": "Create",
+      "reason": "Self-contained commit-and-push workflow. Stages, commits with conventional message, updates changelog, and pushes to remote.",
+      "compatibility": "Uses Bash(git:*) for git operations.",
+      "dependencies": [
+        "Git >= 2.41"
+      ],
+      "reviewed_resources": [
+        "SKILL.md"
+      ],
+      "status": "installed"
     }
   ],
   "additional_source_review": {
