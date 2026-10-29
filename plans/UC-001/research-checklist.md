@@ -18,10 +18,29 @@ created: 29-10-2026
 ## Cách dùng
 
 Mỗi câu hỏi gắn với FR/NFR mà nó phục vụ. Trả lời bằng cách nghiên cứu
-(với sự hỗ trợ của agent hoặc tự nghiên cứu). Mỗi câu trả lời dẫn tới:
+(với sự hỗ trợ của agent hoặc tự nghiên cứu). File deliverable đã được tạo sẵn —
+mở file, điền nội dung vào phần `<!-- Điền kết quả -->` hoặc các mục trống.
 
-- Cập nhật file nghiên cứu trong `docs/research/`, hoặc
-- Tạo bản ghi quyết định trong `docs/decisions/DEC-NNN-chủ-đề.md`.
+## Deliverable map
+
+| RQ | Loại | File |
+|---|---|---|
+| RQ-1 | research | `docs/research/web-content.md` |
+| RQ-2 | research | `docs/research/web-content.md` |
+| RQ-3 | research | `docs/research/web-content.md` |
+| RQ-4 | research | `docs/research/web-content.md` |
+| RQ-5 | decision | `docs/decisions/DEC-001-tts-provider.md` |
+| RQ-6 | research | `docs/research/audio-generation.md` |
+| RQ-7 | research | `docs/research/audio-playback.md` |
+| RQ-8 | research | `docs/research/listening-progress.md` |
+| RQ-9 | decision | `docs/decisions/DEC-002-execution-model.md` |
+| RQ-10 | decision | `docs/decisions/DEC-003-storage.md` |
+| RQ-11 | research | `docs/research/data-storage.md` |
+| RQ-12 | research | `docs/research/preparation-and-recovery.md` |
+| RQ-13 | research | `docs/research/audio-playback.md` |
+| RQ-14 | research | `docs/research/authentication.md` |
+| RQ-15 | decision | `docs/decisions/DEC-004-stack.md` |
+| RQ-16 | decision | `docs/decisions/DEC-005-hosting.md` |
 
 ## Câu hỏi
 

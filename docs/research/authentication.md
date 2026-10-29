@@ -2,12 +2,21 @@
 id: TF-007
 title: "Đăng nhập và quyền truy cập"
 created-at: "21-10-2026"
-updated-at: "21-10-2026"
+updated-at: "29-10-2026"
 ---
 
 # Đăng nhập và quyền truy cập
 
-- **Q-031:** Làm thế nào để tạo sẵn tài khoản owner và đăng nhập bằng email, mật khẩu?
-- **Q-032:** Làm thế nào để transcript và audio chỉ được truy cập sau khi xác thực?
-- **Q-033:** Làm thế nào để ngăn truy cập trái phép ngay cả khi người khác biết đường dẫn file hoặc ID bản lưu?
-- **Q-034:** Làm thế nào để giữ API key và thông tin dịch vụ khỏi mã chạy trên trình duyệt?
+## **RQ-14:** Làm thế nào để giữ API key của TTS provider và các secret khỏi mã chạy trên trình duyệt?
+
+- **Phục vụ:** NFR-002 M-1
+- **Ticket:** #15
+- **Trạng thái:** open
+
+<!-- Điền kết quả nghiên cứu ở đây. Bao gồm:
+- Kiến trúc: client không bao giờ gọi TTS trực tiếp, luôn qua backend
+- Lưu secret: environment variables, secret manager (platform-specific)
+- Đảm bảo: không leak trong client bundle, không trong error messages, không trong network tab
+- Framework support: Next.js server-only, env prefix conventions
+- Đề xuất approach cho V1
+-->

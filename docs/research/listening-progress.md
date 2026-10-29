@@ -2,12 +2,24 @@
 id: TF-005
 title: "Tiến độ nghe"
 created-at: "21-10-2026"
-updated-at: "21-10-2026"
+updated-at: "29-10-2026"
 ---
 
 # Tiến độ nghe
 
-- **Q-023:** Làm thế nào để lấy vị trí đang nghe và lưu tiến độ trên thiết bị?
-- **Q-024:** Làm thế nào để khôi phục cùng audio mà không vượt trước và chỉ lùi tối đa 5 giây?
-- **Q-025:** Làm thế nào để tránh lấy nhầm tiến độ giữa các bản cùng link hoặc các lượt nghe lại?
-- **Q-026:** Làm thế nào để tiến độ cũ không ghi đè tiến độ đã reset sau khi thay thế hoặc tạo lại audio?
+## **RQ-8:** Lưu tiến độ ở đâu và bằng cơ chế nào?
+
+> Đảm bảo khôi phục sau gián đoạn đột ngột trên cùng thiết bị, lùi tối đa 5 giây.
+
+- **Phục vụ:** FR-006 AC-1/AC-6, NFR-003 M-1
+- **Ticket:** #9
+- **Trạng thái:** open
+
+<!-- Điền kết quả nghiên cứu ở đây. Bao gồm:
+- So sánh lựa chọn: localStorage, IndexedDB, server-side, hybrid
+- Tần suất lưu: mỗi bao nhiêu giây để đảm bảo lùi ≤ 5s
+- API lấy vị trí phát: HTMLAudioElement.currentTime
+- Event nào trigger lưu: timeupdate, pause, beforeunload, visibilitychange
+- Xử lý gián đoạn đột ngột: beforeunload có đáng tin không trên mobile
+- Đề xuất cơ chế cho V1
+-->

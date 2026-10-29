@@ -2,14 +2,25 @@
 id: TF-004
 title: "Lưu dữ liệu"
 created-at: "21-10-2026"
-updated-at: "21-10-2026"
+updated-at: "29-10-2026"
 ---
 
 # Lưu dữ liệu
 
-- **Q-017:** Transcript, audio, thông tin bản đã lưu và tiến độ nên được lưu ở đâu?
-- **Q-018:** Làm thế nào để nghe thử mà chưa tạo bản lưu lâu dài, rồi lưu đúng kết quả đang nghe?
-- **Q-019:** Làm thế nào để chỉ báo lưu hoàn tất khi cả transcript và audio đã lưu thành công?
-- **Q-020:** Làm thế nào để thay thế bản cũ mà vẫn giữ bản cũ dùng được nếu thao tác mới thất bại?
-- **Q-021:** Làm thế nào để nhiều bản cùng link tồn tại riêng nhưng có thể dùng lại cùng audio?
-- **Q-022:** Dữ liệu tạm của bản không lưu được giữ và dọn như thế nào?
+## **RQ-11:** Làm thế nào để xác định audio tương thích?
+
+> Khớp transcript, cùng cấu hình tạo audio, còn dùng được. Dùng hash transcript hay so ký tự?
+
+- **Phục vụ:** FR-008 AC-1/AC-13/AC-14/AC-15
+- **Ticket:** #12
+- **Trạng thái:** open
+- **Blocked by:** #11 (RQ-10: cần biết storage để biết cách query)
+
+<!-- Điền kết quả nghiên cứu ở đây. Bao gồm:
+- Định nghĩa "tương thích" theo FR-008: transcript giống hệt + cùng cấu hình tạo audio + còn dùng được
+- Cách so sánh transcript: hash (SHA-256) vs exact string comparison
+- Cấu hình tạo audio gồm gì: provider, model, voice, parameters
+- Schema fingerprint: hash(transcript + config) → lookup audio
+- Xử lý edge case: cùng text khác whitespace, cùng hash khác provider version
+- Đề xuất approach
+-->

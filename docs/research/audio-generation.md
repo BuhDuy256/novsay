@@ -2,15 +2,24 @@
 id: TF-002
 title: "Tạo audio"
 created-at: "21-10-2026"
-updated-at: "21-10-2026"
+updated-at: "29-10-2026"
 ---
 
 # Tạo audio
 
-- **Q-006:** Làm thế nào để chuyển transcript tiếng Trung thành audio?
-- **Q-007:** Dịch vụ hoặc công cụ nào cho phép lấy file audio để lưu và phát lại?
-- **Q-008:** Làm thế nào để tạo audio cho một chương vượt giới hạn độ dài đầu vào?
-- **Q-009:** Nếu phải chia transcript, làm thế nào để audio không thiếu, lặp hoặc đảo thứ tự nội dung?
-- **Q-010:** Tạo audio một chương mất bao lâu, tốn bao nhiêu và tạo ra file lớn cỡ nào?
-- **Q-011:** Làm thế nào để xác định audio đã tạo đầy đủ và nghe được?
-- **Q-012:** Làm thế nào để biết audio có sẵn tương thích với transcript và cấu hình hiện tại?
+## **RQ-6:** Transcript một chương dài bao nhiêu ký tự? Provider có giới hạn đầu vào không?
+
+> Nếu phải chia, làm thế nào để ghép audio không thiếu/lặp/đảo?
+
+- **Phục vụ:** FR-004 AC-2
+- **Ticket:** #7
+- **Trạng thái:** open
+- **Blocked by:** #6 (RQ-5: cần biết provider để biết giới hạn)
+
+<!-- Điền kết quả nghiên cứu ở đây. Bao gồm:
+- Độ dài ký tự trung bình của một chương Novel543 (lấy mẫu vài chương)
+- Giới hạn đầu vào của provider đã chọn (từ DEC-001)
+- Chiến lược chunking nếu cần: chia theo đoạn, theo câu, hay theo ký tự
+- Cách ghép audio chunks: nối file, crossfade, hay streaming
+- Đảm bảo không thiếu/lặp/đảo thứ tự
+-->
