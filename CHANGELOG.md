@@ -3,6 +3,9 @@
 ## [Unreleased]
 
 ### Added
+- DEC-006: decision to stop Novsay development; keep docs and research for
+  reference, no further implementation (unclear value vs. existing products,
+  unresolved anti-bot obstacles, cost not justified)
 - `docs/research/_STYLE.md`: writing style guide for research notes, enforced via
   `AGENTS.md` key paths table so all agents follow consistent style
 - RQ-4 anti-bot research: tested novel543.com and 10 alternative Chinese novel sites,
