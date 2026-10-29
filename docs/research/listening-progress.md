@@ -12,7 +12,7 @@ updated-at: "29-10-2026"
 > Đảm bảo khôi phục sau gián đoạn đột ngột trên cùng thiết bị, lùi tối đa 5 giây.
 
 - **Phục vụ:** FR-006 AC-1/AC-6, NFR-003 M-1
-- **Ticket:** #9
+- **Ticket:** [#9](https://github.com/BuhDuy256/novsay/issues/9)
 - **Trạng thái:** open
 
 <!-- Điền kết quả nghiên cứu ở đây. Bao gồm:

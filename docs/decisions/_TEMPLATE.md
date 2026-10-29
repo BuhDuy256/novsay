@@ -9,7 +9,9 @@ affects: "FR-NNN, NFR-NNN"
 
 ## Câu hỏi
 
-<!-- Câu hỏi nghiên cứu mà quyết định này trả lời. Copy hoặc link tới câu hỏi gốc. -->
+<!-- Câu hỏi nghiên cứu mà quyết định này trả lời. Bao gồm link đến ticket:
+     (RQ-N, ticket [#N](https://github.com/{owner}/{repo}/issues/N))
+     Xem WORKFLOW.md "Linking convention". -->
 
 ## Các lựa chọn đã xem xét
 

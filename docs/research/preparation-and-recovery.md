@@ -12,9 +12,9 @@ updated-at: "29-10-2026"
 > Đang chạy, xong, thất bại — mà không tạo yêu cầu trùng.
 
 - **Phục vụ:** FR-012 AC-1/AC-4
-- **Ticket:** #13
+- **Ticket:** [#13](https://github.com/BuhDuy256/novsay/issues/13)
 - **Trạng thái:** open
-- **Blocked by:** #10 (RQ-9: execution model ảnh hưởng cách lưu trạng thái)
+- **Blocked by:** [#10](https://github.com/BuhDuy256/novsay/issues/10) (RQ-9: execution model ảnh hưởng cách lưu trạng thái)
 
 <!-- Điền kết quả nghiên cứu ở đây. Bao gồm:
 - State machine của yêu cầu chuẩn bị: pending → processing → ready / failed / interrupted

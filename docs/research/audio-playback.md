@@ -12,7 +12,7 @@ updated-at: "29-10-2026"
 > MP3, OGG, WAV, AAC — định dạng nào, kể cả khi phát nền?
 
 - **Phục vụ:** FR-004, NFR-001
-- **Ticket:** #8
+- **Ticket:** [#8](https://github.com/BuhDuy256/novsay/issues/8)
 - **Trạng thái:** open
 
 <!-- Điền kết quả nghiên cứu ở đây. Bao gồm:
@@ -29,9 +29,9 @@ updated-at: "29-10-2026"
 > Trên iPhone Safari và Windows Chrome.
 
 - **Phục vụ:** NFR-001 M-1
-- **Ticket:** #14
+- **Ticket:** [#14](https://github.com/BuhDuy256/novsay/issues/14)
 - **Trạng thái:** open
-- **Blocked by:** #8 (RQ-7: cần biết định dạng audio trước)
+- **Blocked by:** [#8](https://github.com/BuhDuy256/novsay/issues/8) (RQ-7: cần biết định dạng audio trước)
 
 <!-- Điền kết quả nghiên cứu ở đây. Bao gồm:
 - Media Session API: có cần không, cách dùng

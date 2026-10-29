@@ -63,9 +63,12 @@ sequenceDiagram
 
 ## Deliverable
 
-<!-- What closing this ticket produces. One of: -->
-<!-- - Decision record: docs/decisions/DEC-NNN-topic.md -->
-<!-- - Research answer: update to docs/research/topic.md, question Q-NNN -->
+<!-- What closing this ticket produces. Use a clickable link so the reviewer
+     can open the file directly. Format:
+
+     **Decision record:** [docs/decisions/DEC-NNN-topic.md](https://github.com/BuhDuy256/novsay/blob/main/docs/decisions/DEC-NNN-topic.md)
+
+     **Research answer:** [docs/research/topic.md](https://github.com/BuhDuy256/novsay/blob/main/docs/research/topic.md), section RQ-N -->
 
 ## Acceptance
 

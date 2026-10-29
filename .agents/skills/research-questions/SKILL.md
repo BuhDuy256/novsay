@@ -101,6 +101,24 @@ Create deliverable files for each question:
 
 Include a **deliverable map** table in the checklist linking each RQ to its file.
 
+## Linking convention
+
+All cross-references must be clickable Markdown links (see WORKFLOW.md "Linking
+convention"). At the start, derive the repo base URL:
+
+```bash
+git remote get-url origin
+# https://github.com/{owner}/{repo}.git → base = https://github.com/{owner}/{repo}
+```
+
+Apply to every output:
+
+- **Research checklist:** Ticket column uses `[#N]({base}/issues/N)`, Deliverable map
+  File column uses `[docs/research/topic.md]({base}/blob/main/docs/research/topic.md)`.
+- **Research files** (`docs/research/`): `**Ticket:** [#N]({base}/issues/N)` and
+  `**Blocked by:** [#N]({base}/issues/N)`.
+- **Decision files** (`docs/decisions/`): `ticket [#N]({base}/issues/N)`.
+
 ## Rules
 
 - Do not generate questions about product requirements — those are settled in the spec.

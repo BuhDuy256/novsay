@@ -9,7 +9,7 @@ affects: "FR-004, BR-002, FR-008"
 
 ## Câu hỏi
 
-Dùng TTS provider nào cho tiếng Trung? (RQ-5, ticket #6)
+Dùng TTS provider nào cho tiếng Trung? (RQ-5, ticket [#6](https://github.com/BuhDuy256/novsay/issues/6))
 
 Cần chọn provider và giọng đọc cố định tiếng Trung. Quyết định này ảnh hưởng:
 - Cấu hình tạo audio (FR-008 AC-1 tương thích)

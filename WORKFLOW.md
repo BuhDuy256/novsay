@@ -181,27 +181,28 @@ Every scoped build has one flow tracker issue — the root issue. It is created 
 start of Phase 1 and links to every other ticket. The scope definition appears at the
 top. Template: `.github/ISSUE_TEMPLATE/flow-tracker.md`.
 
-The tracker uses the format:
+The tracker uses the format (local files use full links per "Linking convention";
+GitHub issue bodies use bare `#N` which auto-links):
 
 ```markdown
 ## Phase 1: Research
-- [ ] #N question-title (status)
+- [ ] [#N]({base}/issues/N) question-title (status)
 
 ## Phase 2: Testing Plan
-- [ ] #N test-stub-title
+- [ ] [#N]({base}/issues/N) test-stub-title
 Blocked by: Phase 1 complete
 
 ## Phase 3: Implementation Plan
-- [ ] #N plan-review
+- [ ] [#N]({base}/issues/N) plan-review
 Blocked by: Phase 2 complete
 
 ## Phase 4: Implementation
-- [ ] #N module-title
-Blocked by: #test-stub, #other-module
+- [ ] [#N]({base}/issues/N) module-title
+Blocked by: [#test-stub]({base}/issues/N), [#other-module]({base}/issues/N)
 
 ## Phase 5: Post-impl Testing
-- [ ] #N test-title
-Blocked by: #module
+- [ ] [#N]({base}/issues/N) test-title
+Blocked by: [#module]({base}/issues/N)
 
 ## Phase 6: Verification
 Blocked by: Phase 5 complete
@@ -239,3 +240,26 @@ steps. Every implementation ticket must follow these rules:
 ## Milestones
 
 One milestone per UC build: `UC-XXX`. All tickets for that UC belong to it.
+
+## Linking convention
+
+Every cross-reference between files, issues and deliverables must be a clickable
+Markdown link — never a bare `#N` or a plain file path. This applies to all outputs:
+plan files, issue bodies, research files, decision files, and flow tracker updates.
+
+Derive the repo base URL from `git remote get-url origin` at the start of each build.
+
+| Reference type | Format |
+|---|---|
+| Issue from a local file | `[#N](https://github.com/{owner}/{repo}/issues/N)` |
+| File from an issue body | `[docs/research/topic.md](https://github.com/{owner}/{repo}/blob/main/docs/research/topic.md)` |
+| Issue from an issue body | `#N` (GitHub auto-links these; no change needed) |
+| Blocked-by in a local file | `[#N](https://github.com/{owner}/{repo}/issues/N)` |
+
+**Where to apply:**
+
+- **Research checklist** — Ticket column, Deliverable map File column
+- **Flow tracker** (local `plans/` mirror) — all `#N` references
+- **Research files** (`docs/research/`) — `**Ticket:**` and `**Blocked by:**` fields
+- **Decision files** (`docs/decisions/`) — `ticket #N` references
+- **Issue bodies** — Deliverable section (link to file), Flow tracker reference (auto-linked)

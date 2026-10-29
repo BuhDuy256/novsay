@@ -9,7 +9,7 @@ affects: "FR-007, FR-012"
 
 ## Câu hỏi
 
-Việc lấy chương và tạo audio chạy ở đâu? Serverless function, long-running server, hay queue worker? (RQ-9, ticket #10)
+Việc lấy chương và tạo audio chạy ở đâu? Serverless function, long-running server, hay queue worker? (RQ-9, ticket [#10](https://github.com/BuhDuy256/novsay/issues/10))
 
 Cần biết execution model để thiết kế retry, trạng thái yêu cầu, và khả năng resume khi owner quay lại.
 

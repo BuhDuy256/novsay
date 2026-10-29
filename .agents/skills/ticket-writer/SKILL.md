@@ -77,6 +77,25 @@ Implementation tickets must follow these rules (from WORKFLOW.md):
 6. Blocked by prerequisites.
 7. Maximum 3 files changed.
 
+## Linking convention
+
+All cross-references must be clickable Markdown links (see WORKFLOW.md "Linking
+convention"). At the start, derive the repo base URL:
+
+```bash
+git remote get-url origin
+# https://github.com/{owner}/{repo}.git → base = https://github.com/{owner}/{repo}
+```
+
+Apply to every output:
+
+- **Issue bodies — Deliverable section:** use
+  `[docs/research/topic.md]({base}/blob/main/docs/research/topic.md)`.
+- **Local plan files** (checklist, flow tracker): update Ticket column and `#N`
+  references to `[#N]({base}/issues/N)`.
+- Issue-to-issue references (`Blocked by #N`) stay as `#N` in issue bodies because
+  GitHub auto-links them. Only local `.md` files need full links.
+
 ## Rules
 
 - Create the milestone first if it does not exist: `gh api ... -f title="UC-XXX"`.

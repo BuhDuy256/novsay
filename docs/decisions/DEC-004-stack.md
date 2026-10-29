@@ -9,7 +9,7 @@ affects: "cross-cutting, all implementation tickets"
 
 ## Câu hỏi
 
-Ngôn ngữ, runtime, framework frontend và backend nào dùng cho Novsay? (RQ-15, ticket #16)
+Ngôn ngữ, runtime, framework frontend và backend nào dùng cho Novsay? (RQ-15, ticket [#16](https://github.com/BuhDuy256/novsay/issues/16))
 
 Quyết định nền tảng ảnh hưởng mọi ticket implementation.
 

@@ -9,7 +9,7 @@ affects: "FR-008, BR-003, FR-006, FR-012, FR-013"
 
 ## Câu hỏi
 
-Transcript, audio file, metadata bản đã lưu và tiến độ nên được lưu ở đâu? Database nào cho metadata, blob storage nào cho audio? (RQ-10, ticket #11)
+Transcript, audio file, metadata bản đã lưu và tiến độ nên được lưu ở đâu? Database nào cho metadata, blob storage nào cho audio? (RQ-10, ticket [#11](https://github.com/BuhDuy256/novsay/issues/11))
 
 Cần lưu không thời hạn (BR-003), hỗ trợ nhiều bản cùng link, query audio tương thích (FR-008).
 

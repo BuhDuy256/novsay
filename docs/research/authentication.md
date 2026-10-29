@@ -10,7 +10,7 @@ updated-at: "29-10-2026"
 ## UC-001/RQ-14: Bảo vệ API key và secret
 
 - **Phục vụ:** NFR-002 M-1
-- **Ticket:** #15
+- **Ticket:** [#15](https://github.com/BuhDuy256/novsay/issues/15)
 - **Trạng thái:** open
 
 <!-- Điền kết quả nghiên cứu ở đây. Bao gồm:

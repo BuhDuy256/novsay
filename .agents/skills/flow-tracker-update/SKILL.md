@@ -46,6 +46,19 @@ gh issue edit TRACKER_NUMBER --body "..."
 
 Update `plans/UC-XXX/flow-tracker.md` to match the GitHub issue.
 
+## Linking convention
+
+All `#N` references in local plan files must be clickable Markdown links (see
+WORKFLOW.md "Linking convention"). At the start, derive the repo base URL:
+
+```bash
+git remote get-url origin
+# https://github.com/{owner}/{repo}.git → base = https://github.com/{owner}/{repo}
+```
+
+When updating `plans/UC-XXX/flow-tracker.md`, write every ticket reference as
+`[#N]({base}/issues/N)`. The GitHub issue body uses bare `#N` (auto-linked).
+
 ## Rules
 
 - Do not close tickets — only update the tracker display.

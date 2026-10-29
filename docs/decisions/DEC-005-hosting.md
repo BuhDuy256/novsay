@@ -9,7 +9,7 @@ affects: "cross-cutting, DEC-002 execution model, DEC-003 storage"
 
 ## Câu hỏi
 
-Hosting nào đáp ứng yêu cầu? Chi phí dự kiến? (RQ-16, ticket #17)
+Hosting nào đáp ứng yêu cầu? Chi phí dự kiến? (RQ-16, ticket [#17](https://github.com/BuhDuy256/novsay/issues/17))
 
 Ảnh hưởng execution model (DEC-002), storage (DEC-003), deployment pipeline.
 

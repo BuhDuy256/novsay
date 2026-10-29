@@ -12,9 +12,9 @@ updated-at: "29-10-2026"
 > Nếu phải chia, làm thế nào để ghép audio không thiếu/lặp/đảo?
 
 - **Phục vụ:** FR-004 AC-2
-- **Ticket:** #7
+- **Ticket:** [#7](https://github.com/BuhDuy256/novsay/issues/7)
 - **Trạng thái:** open
-- **Blocked by:** #6 (RQ-5: cần biết provider để biết giới hạn)
+- **Blocked by:** [#6](https://github.com/BuhDuy256/novsay/issues/6) (RQ-5: cần biết provider để biết giới hạn)
 
 <!-- Điền kết quả nghiên cứu ở đây. Bao gồm:
 - Độ dài ký tự trung bình của một chương Novel543 (lấy mẫu vài chương)

@@ -19,10 +19,11 @@ created: DD-MM-YYYY
 ## Cách dùng
 
 Mỗi câu hỏi gắn với FR/NFR mà nó phục vụ. Trả lời bằng cách nghiên cứu
-(với sự hỗ trợ của agent hoặc tự nghiên cứu). Mỗi câu trả lời dẫn tới:
+(với sự hỗ trợ của agent hoặc tự nghiên cứu). File deliverable đã được tạo sẵn —
+mở file, điền nội dung vào phần `<!-- Điền kết quả -->` hoặc các mục trống.
 
-- Cập nhật file nghiên cứu trong `docs/research/`, hoặc
-- Tạo bản ghi quyết định trong `docs/decisions/DEC-NNN-chủ-đề.md`.
+> **Lưu ý:** Mọi tham chiếu `#N` và đường dẫn file phải là link clickable.
+> Xem WORKFLOW.md "Linking convention".
 
 ## Mô hình luồng
 
@@ -47,19 +48,27 @@ Mỗi câu hỏi gắn với FR/NFR mà nó phục vụ. Trả lời bằng các
 
 1. **A1.1** — {Xử lý lỗi/ngoại lệ} → **RQ-N** _(chưa biết xử lý thế nào)_
 
+## Deliverable map
+
+<!-- Link mỗi RQ đến file deliverable. Dùng full Markdown link. -->
+
+| RQ | Loại | File |
+|---|---|---|
+| RQ-1 | research | [docs/research/topic.md](https://github.com/{owner}/{repo}/blob/main/docs/research/topic.md) |
+
 ## Câu hỏi
 
 ### FR-NNN — Tên
 
-| # | Câu hỏi | Bước luồng | Vì sao quan trọng | Ticket | Trạng thái |
-|---|---|---|---|---|---|
-| RQ-1 | | S1.2 | | #N | open |
+| # | Câu hỏi | Vì sao quan trọng | Ticket | Trạng thái |
+|---|---|---|---|---|
+| RQ-1 | | | [#N](https://github.com/{owner}/{repo}/issues/N) | open |
 
 ### NFR-NNN — Tên
 
-| # | Câu hỏi | Bước luồng | Vì sao quan trọng | Ticket | Trạng thái |
-|---|---|---|---|---|---|
-| RQ-N | | | | #N | open |
+| # | Câu hỏi | Vì sao quan trọng | Ticket | Trạng thái |
+|---|---|---|---|---|
+| RQ-N | | | [#N](https://github.com/{owner}/{repo}/issues/N) | open |
 
 ## Trạng thái
 
