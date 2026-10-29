@@ -10,6 +10,8 @@
   distinguishes curl/Schannel from Node.js/OpenSSL via JA3/JA4)
 
 ### Changed
+- RQ-4 status → answered in research checklist; `docs/research/web-content.md`
+  renumbered list items to two-digit style for consistent sorting
 - RQ-3 status → answered in research checklist
 - `AGENTS.md` key paths: Research row now references `_STYLE.md`
 - Product vision: Novsay is now a web novel listening platform, not a generic TTS tool
