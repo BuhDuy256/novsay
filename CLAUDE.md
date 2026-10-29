@@ -5,21 +5,8 @@
 
 ## Known mistakes — do NOT repeat
 
-### Glob patterns must match depth
-
-**Wrong:** `.agents/skills/*` — only matches files directly in the folder, misses
-all subdirectories.
-**Right:** `.agents/skills/**/*` — matches files at any depth.
-
-When listing skills, files in nested directories, or any tree structure, always use
-`**/*` to recurse. A single `*` only matches one level.
-
-### Skills exist — use them
-
-All skills listed in AGENTS.md are installed at `.agents/skills/<name>/SKILL.md`.
-Before saying "skill not found", glob with `**/*` or check `.agents/skill-manifest.json`.
-When the user says `/commit-push` or any skill name, invoke it via the Skill tool — do
-not fall back to manual steps.
+- Use `**/*` not `*` when globbing nested directories — `*` only matches one level.
+- All AGENTS.md skills exist at `.agents/skills/<name>/SKILL.md` — check before saying "not found".
 
 ## Workflow triggers
 
