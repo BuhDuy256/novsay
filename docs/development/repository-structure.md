@@ -1,3 +1,7 @@
+> **Status: proposal** — This layout depends on stack and architecture decisions not yet
+> made (see `docs/research/stack-and-deployment.md` Q-035). The directory table below
+> will be updated after the relevant decisions are recorded in `docs/decisions/`.
+
 # Repository structure
 
 This document records where code lives and who owns dependencies. It is a living

@@ -244,6 +244,66 @@
         "SKILL.md"
       ],
       "status": "installed"
+    },
+    {
+      "name": "research-questions",
+      "source_repository": "repository-local",
+      "source_path": null,
+      "installed_path": ".agents/skills/research-questions",
+      "decision": "Create",
+      "reason": "Generate research checklists from use cases during Phase 1 of the build workflow. Reads UC, FRs, NFRs, BRs and produces questions grouped by requirement with options and tradeoffs for technical choices.",
+      "compatibility": "Tool-neutral instructions.",
+      "dependencies": [],
+      "reviewed_resources": [
+        "SKILL.md"
+      ],
+      "status": "installed"
+    },
+    {
+      "name": "testing-plan",
+      "source_repository": "repository-local",
+      "source_path": null,
+      "installed_path": ".agents/skills/testing-plan",
+      "decision": "Create",
+      "reason": "Generate testing plans from FRs/ACs and decisions during Phase 2 of the build workflow. Maps every acceptance criterion to a test type and phase.",
+      "compatibility": "Tool-neutral instructions.",
+      "dependencies": [],
+      "reviewed_resources": [
+        "SKILL.md"
+      ],
+      "status": "installed"
+    },
+    {
+      "name": "ticket-writer",
+      "source_repository": "repository-local",
+      "source_path": null,
+      "installed_path": ".agents/skills/ticket-writer",
+      "decision": "Create",
+      "reason": "Create GitHub Issues from plan documents using issue templates. Sets labels, milestones, and blocked-by references. Ensures flash-model-friendly ticket format.",
+      "compatibility": "Requires GitHub CLI (gh) for issue creation.",
+      "dependencies": [
+        "GitHub CLI (gh) authenticated"
+      ],
+      "reviewed_resources": [
+        "SKILL.md"
+      ],
+      "status": "installed"
+    },
+    {
+      "name": "flow-tracker-update",
+      "source_repository": "repository-local",
+      "source_path": null,
+      "installed_path": ".agents/skills/flow-tracker-update",
+      "decision": "Create",
+      "reason": "Update the flow tracker issue for a UC based on current ticket statuses. Provides single-glance progress visibility across all phases.",
+      "compatibility": "Requires GitHub CLI (gh) for issue reading and editing.",
+      "dependencies": [
+        "GitHub CLI (gh) authenticated"
+      ],
+      "reviewed_resources": [
+        "SKILL.md"
+      ],
+      "status": "installed"
     }
   ],
   "additional_source_review": {
@@ -262,10 +322,10 @@
     },
     {
       "name": "research",
-      "decision": "Adjust",
-      "condition": "Adopt for a concrete technical question needing durable cited findings.",
+      "decision": "Superseded",
+      "condition": "Superseded by research-questions skill which integrates with the build workflow.",
       "status": "not_installed",
-      "reason": "No concrete research workflow requiring this additional skill has been identified for the initial setup."
+      "reason": "The research-questions skill covers this need within the Phase 1 workflow, generating questions from use cases rather than generic research."
     },
     {
       "name": "webapp-testing",

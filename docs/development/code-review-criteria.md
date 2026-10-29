@@ -1,3 +1,6 @@
+> **Status: proposal** — These criteria are stack-neutral and can apply once code exists.
+> The project has no source code yet; these will take effect when implementation begins.
+
 # Code review criteria
 
 These criteria define how every reviewer (human or coding agent) judges a

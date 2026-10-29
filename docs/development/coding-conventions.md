@@ -1,3 +1,8 @@
+> **Status: proposal** — These conventions assume TypeScript and a workspace layout
+> that depend on stack choices not yet decided (see `docs/research/stack-and-deployment.md`
+> Q-035). Treat as guidance, not constraint, until the relevant decisions are recorded
+> in `docs/decisions/`.
+
 # Coding conventions
 
 This document records the project's coding conventions. It is a living document: each
