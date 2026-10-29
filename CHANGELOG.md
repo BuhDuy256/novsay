@@ -14,8 +14,16 @@
 - New skills: `research-questions`, `testing-plan`, `ticket-writer`,
   `flow-tracker-update`
 - Workflow triggers in `CLAUDE.md` (build/continue/status UC-XXX)
+- Flow model section in the research checklist template: per-step runtime trace
+  that every research question maps back to
+- Mermaid sequence diagram section in the research ticket template, highlighting
+  the flow step each question comes from
 
 ### Changed
+- `research-questions` skill builds an end-to-end flow model first, then derives
+  questions from it; each question now carries a flow-step reference
+- `ticket-writer` skill documents how research tickets reuse one base flow diagram
+  with only the highlight moving per question
 - Flatten `docs/research/technical-foundations/` to `docs/research/` and drop
   number prefixes from filenames
 - Update `docs/research/README.md` as topic index with question status legend

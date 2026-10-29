@@ -9,7 +9,39 @@ labels: phase:research
 
 **Use case:** UC-XXX
 **Related FR/NFR:** FR-NNN / NFR-NNN
+**Flow step:** S?.? — {tên bước}
 **Flow tracker:** #N
+
+## Flow diagram
+
+<!-- Mermaid sequence diagram showing the runtime flow of the UC.
+     Highlight the step(s) this question relates to using `activate` / `note`.
+     The reader should see WHERE in the flow this question comes from
+     before reading the question itself. -->
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Frontend
+    participant Backend
+    participant External
+
+    User->>Frontend: action
+    Frontend->>Backend: request
+
+    rect rgb(255, 230, 150)
+        note right of Backend: 👉 RQ-N: this step
+        Backend->>External: operation
+        External-->>Backend: response
+    end
+
+    Backend-->>Frontend: result
+    Frontend-->>User: feedback
+```
+
+<!-- Replace the diagram above with the actual flow for this UC.
+     Use `rect rgb(255, 230, 150)` to highlight the step(s)
+     this research question comes from. -->
 
 ## Question
 

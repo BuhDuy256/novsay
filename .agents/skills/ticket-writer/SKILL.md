@@ -38,10 +38,15 @@ gh issue create \
 ```
 
 The body follows the matching template in `.github/ISSUE_TEMPLATE/`:
-- Research questions → `research-ticket.md`
+- Research questions → `research-ticket.md` (includes a Mermaid sequence diagram
+  showing the UC flow with the relevant step highlighted)
 - Test stubs → `test-stub-ticket.md`
 - Implementation steps → `implementation-ticket.md`
 - Post-impl tests → `post-impl-test-ticket.md`
+
+For **research tickets**, the flow diagram is generated from the flow model in the
+research checklist. The same base diagram is reused across related questions — only
+the highlighted `rect` moves to the step each question comes from.
 
 ### 3. Set dependencies
 
